@@ -1589,8 +1589,9 @@ body.services-page .spaced-service-hero h1 span {
 }
 
 body.services-page .plumbing-service-hero .hero-bg-photo {
-  transform: scale(1.4);
-  transform-origin: left center;
+  object-position: center center;
+  transform: translateY(-18%) scale(1.18);
+  transform-origin: center center;
 }
 
 body.services-page .heating-service-hero .hero-bg-photo {
