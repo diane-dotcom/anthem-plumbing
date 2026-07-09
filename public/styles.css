@@ -1591,7 +1591,7 @@ body.services-page .spaced-service-hero h1 span {
 body.services-page .plumbing-service-hero .hero-bg-photo {
   height: 150%;
   object-position: center center;
-  top: -40%;
+  top: -25%;
   transform: none;
   transform-origin: center center;
 }
