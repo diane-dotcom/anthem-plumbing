@@ -111,6 +111,33 @@
         },
       ];
 
+      const plumbingServiceCards = [
+        { slug: 'ac', id: 'ac', photo: 'service-photo-hvac', icon: 'snowflake', title: 'AC', copy: 'Air conditioning diagnostics and repair support for homes that need fast cooling help.', bullets: ['AC troubleshooting', 'Cooling system checks', 'Comfort recommendations'], href: 'services.html?service=ac', action: 'View AC Service', service: 'AC', heroImage: 'assets/air.png' },
+        { slug: 'drain-cleaning', id: 'drain-cleaning', photo: 'service-photo-drain', icon: 'waves', title: 'Drain Cleaning', copy: 'Clog removal, slow drain service, and drain diagnostics for kitchens, baths, and main lines.', bullets: ['Clog removal', 'Slow drain diagnostics', 'Kitchen and bath drains'], href: 'services.html?service=drain-cleaning', action: 'View Drain Cleaning', service: 'Drain Cleaning' },
+        { slug: 'emergency-plumbing', id: 'emergency-plumbing', photo: 'service-photo-emergency', icon: 'siren', title: 'Emergency Plumbing', copy: 'Fast help for urgent leaks, backups, broken fixtures, and plumbing problems that cannot wait.', bullets: ['Urgent plumbing support', 'Leak and backup help', 'After-hours response'], href: 'services.html?service=emergency-plumbing', action: 'View Emergency Plumbing', service: 'Emergency Plumbing' },
+        { slug: 'sewer-repair', id: 'sewer-repair', photo: 'service-photo-pipe', icon: 'construction', title: 'Sewer Repair', copy: 'Sewer line diagnostics and repair guidance when backups, odors, or line damage need attention.', bullets: ['Sewer diagnostics', 'Repair recommendations', 'Backup support'], href: 'services.html?service=sewer-repair', action: 'View Sewer Repair', service: 'Sewer Repair' },
+        { slug: 'waterline-repair', id: 'waterline-repair', photo: 'service-photo-waterline', icon: 'droplets', title: 'Waterline Repair', copy: 'Waterline troubleshooting and repair for leaks, pressure issues, and damaged supply lines.', bullets: ['Leak detection', 'Pressure issue checks', 'Line repair options'], href: 'services.html?service=waterline-repair', action: 'View Waterline Repair', service: 'Waterline Repair' },
+        { slug: 'water-heater-repair', id: 'water-heater-repair', photo: 'service-photo-water-heater-repair', icon: 'heater', title: 'Water Heater Repair', copy: 'Repair help for no-hot-water calls, leaking tanks, inconsistent temperatures, and water heater issues.', bullets: ['No-hot-water diagnostics', 'Leak checks', 'Repair and replacement guidance'], href: 'services.html?service=water-heater-repair', action: 'View Water Heater Repair', service: 'Water Heater Repair' },
+        { slug: 'gas-line-repair', id: 'gas-line-repair', photo: 'service-photo-gas', icon: 'flame', title: 'Gas Line Repair', copy: 'Careful gas line repair and diagnostics for safe, code-aware service around your home.', bullets: ['Gas line diagnostics', 'Safety-focused repairs', 'Clear service recommendations'], href: 'services.html?service=gas-line-repair', action: 'View Gas Line Repair', service: 'Gas Line Repair' },
+        { slug: 'water-softener-installation', id: 'water-softener-installation', photo: 'service-photo-softener', icon: 'sparkles', title: 'Water Softener Installation', copy: 'Water softener installation support for better water quality and protection from hard-water buildup.', bullets: ['System recommendations', 'Installation planning', 'Hard water solutions'], href: 'services.html?service=water-softener-installation', action: 'View Water Softener Installation', service: 'Water Softener Installation' },
+        { slug: 'hydro-jetting', id: 'hydro-jetting', photo: 'service-photo-hydro', icon: 'waves', title: 'Hydro Jetting', copy: 'High-powered drain cleaning for heavy buildup, grease, roots, and stubborn line blockages.', bullets: ['Heavy buildup removal', 'Line cleaning', 'Drain flow restoration'], href: 'services.html?service=hydro-jetting', action: 'View Hydro Jetting', service: 'Hydro Jetting' },
+      ];
+
+      const coolingServiceCards = [
+        { slug: 'ac-repair', id: 'ac-repair', photo: 'service-photo-hvac', icon: 'snowflake', title: 'AC Repair', copy: 'Cooling diagnostics and repairs for weak airflow, warm air, strange noises, and AC breakdowns.', bullets: ['AC diagnostics', 'Cooling repairs', 'System troubleshooting'], href: 'services.html?service=ac-repair', action: 'View AC Repair', service: 'AC Repair' },
+        { slug: 'ac-replacement', id: 'ac-replacement', photo: 'service-photo-hvac', icon: 'refresh-cw', title: 'AC Replacement', copy: 'Replacement planning for aging, inefficient, or unreliable cooling systems.', bullets: ['Replacement options', 'Efficiency guidance', 'Comfort planning'], href: 'services.html?service=ac-replacement', action: 'View AC Replacement', service: 'AC Replacement' },
+        { slug: 'ac-installation', id: 'ac-installation', photo: 'service-photo-hvac', icon: 'settings', title: 'AC Installation', copy: 'AC installation support for dependable cooling, correct sizing, and long-term performance.', bullets: ['New AC installs', 'System sizing', 'Clean installation'], href: 'services.html?service=ac-installation', action: 'View AC Installation', service: 'AC Installation' },
+        { slug: 'insulation', id: 'insulation', photo: 'service-photo-hvac', icon: 'home', title: 'Insulation', copy: 'Insulation support to help improve comfort, reduce heat gain, and support cooling performance.', bullets: ['Comfort improvements', 'Efficiency support', 'Home performance guidance'], href: 'services.html?service=insulation', action: 'View Insulation', service: 'Insulation' },
+        { slug: 'air-duct-cleaning', id: 'air-duct-cleaning', photo: 'service-photo-hvac', icon: 'wind', title: 'Air Duct Cleaning', copy: 'Duct cleaning support for airflow, dust concerns, and cleaner whole-home comfort.', bullets: ['Duct cleaning', 'Airflow support', 'Cleaner comfort'], href: 'services.html?service=air-duct-cleaning', action: 'View Air Duct Cleaning', service: 'Air Duct Cleaning' },
+      ];
+
+      const heatingServiceCards = [
+        { slug: 'furnace-repair', id: 'furnace-repair', photo: 'service-photo-furnace-repair', icon: 'flame', title: 'Furnace Repair', copy: 'Furnace diagnostics and repair support for unreliable heat, ignition issues, and airflow problems.', bullets: ['Furnace diagnostics', 'Heating repairs', 'Safety checks'], href: 'services.html?service=furnace-repair', action: 'View Furnace Repair', service: 'Furnace Repair' },
+        { slug: 'furnace-replacement', id: 'furnace-replacement', photo: 'service-photo-furnace-replacement', icon: 'replace', title: 'Furnace Replacement', copy: 'Replacement guidance for older furnaces that are inefficient, unreliable, or costly to repair.', bullets: ['Replacement options', 'Efficiency guidance', 'Comfort planning'], href: 'services.html?service=furnace-replacement', action: 'View Furnace Replacement', service: 'Furnace Replacement' },
+        { slug: 'heater-repair', id: 'heater-repair', photo: 'service-photo-heater-repair', icon: 'thermometer-sun', title: 'Heater Repair', copy: 'Heating repair support for system issues that affect comfort, safety, or energy use.', bullets: ['Heater diagnostics', 'Repair recommendations', 'Comfort restoration'], href: 'services.html?service=heater-repair', action: 'View Heater Repair', service: 'Heater Repair' },
+        { slug: 'heat-pump-repair', id: 'heat-pump-repair', photo: 'service-photo-heat-pump-repair', icon: 'fan', title: 'Heat Pump Repair', copy: 'Heat pump diagnostics and repairs for heating, cooling, airflow, and performance problems.', bullets: ['Heat pump diagnostics', 'Heating and cooling repair', 'Performance checks'], href: 'services.html?service=heat-pump-repair', action: 'View Heat Pump Repair', service: 'Heat Pump Repair' },
+      ];
+
       const relatedServiceCards = (currentId) => serviceCards.filter((card) => card.id !== currentId);
 
       const servicePages = {
@@ -149,11 +176,11 @@
           eyebrow: 'Plumbing repair and service',
           heading: 'Plumbing Service <span>Done Right.</span>',
           copy: 'Anthem helps with leaks, fixtures, pipe repairs, clogs, and everyday plumbing issues with clean workmanship and clear communication.',
-          heroImage: 'assets/plumbing-anthem.png',
+          heroImage: 'assets/pipes.png',
           kicker: 'Plumbing',
           sectionTitle: 'Explore More Anthem Services',
           sectionCopy: 'One trusted local team for plumbing, water heater, and HVAC support across Anthem and the surrounding area.',
-          cards: relatedServiceCards('plumbing-service'),
+          cards: plumbingServiceCards,
           quality: {
             label: 'Quality Plumbing Service',
             title: 'Built for Reliable Home Plumbing',
@@ -164,6 +191,48 @@
             features: ['Licensed & Insured', 'Plumbing Diagnostics', 'Clean Workmanship', 'Built for the Long Run'],
             image: 'assets/plumbing-anthem.png',
             alt: 'Anthem plumbing team handling home plumbing service',
+          },
+        },
+        cooling: {
+          title: 'Cooling Services Anthem | Anthem Air Conditioning',
+          description: 'Cooling services in Anthem including AC repair, AC replacement, AC installation, insulation, and air duct cleaning.',
+          breadcrumb: 'Home / Services / Cooling',
+          eyebrow: 'Cooling service and AC help',
+          heading: 'Cooling Services <span>Done Right.</span>',
+          copy: 'Anthem helps keep homes cool with AC repair, replacement, installation, insulation support, and air duct cleaning across the valley.',
+          heroImage: 'assets/air.png',
+          kicker: 'Cooling',
+          sectionTitle: 'Explore More Anthem Services',
+          sectionCopy: 'Cooling services for reliable comfort, cleaner airflow, and better home performance.',
+          cards: coolingServiceCards,
+          quality: {
+            label: 'Quality Cooling Service',
+            title: 'Built for Reliable Cooling',
+            copy: ['Cooling problems can make your home uncomfortable quickly. Anthem provides practical diagnostics, clear options, and dependable service for AC and home-comfort needs.', 'From repairs and replacements to duct cleaning and insulation support, our team focuses on comfort, efficiency, and workmanship that lasts.'],
+            features: ['Licensed & Insured', 'Cooling Diagnostics', 'Clean Workmanship', 'Built for Comfort'],
+            image: 'assets/service-3-hvac.png',
+            alt: 'Anthem cooling technician servicing an AC system',
+          },
+        },
+        heating: {
+          title: 'Heating Services Anthem | Anthem Heating',
+          description: 'Heating services in Anthem including furnace repair, furnace replacement, heater repair, and heat pump repair.',
+          breadcrumb: 'Home / Services / Heating',
+          eyebrow: 'Heating service and repair',
+          heading: 'Heating Services <span>Done Right.</span>',
+          copy: 'Anthem helps restore dependable heat with furnace repair, furnace replacement, heater repair, and heat pump repair support.',
+          heroImage: 'assets/heating.png',
+          kicker: 'Heating',
+          sectionTitle: 'Explore More Anthem Services',
+          sectionCopy: 'Heating services for steady comfort, safety, and dependable performance.',
+          cards: heatingServiceCards,
+          quality: {
+            label: 'Quality Heating Service',
+            title: 'Built for Safe, Steady Heat',
+            copy: ['Heating problems can affect comfort, safety, and energy use when equipment is not working correctly. Anthem provides careful diagnostics and practical repair support.', 'From furnace issues to heat pump performance concerns, our team explains the problem clearly and completes the work with clean, careful workmanship.'],
+            features: ['Licensed & Insured', 'Heating Diagnostics', 'Clean Workmanship', 'Built for Comfort'],
+            image: 'assets/service-3-hvac.png',
+            alt: 'Anthem heating technician servicing heating equipment',
           },
         },
         'water-heaters': {
@@ -214,10 +283,37 @@
         },
       };
 
+      const makeDetailServicePage = (card, categoryTitle, siblingCards) => ({
+        title: `${card.title} Anthem | Anthem ${categoryTitle}`,
+        description: `${card.title} service in Anthem and the surrounding valley from Anthem Air Conditioning & Plumbing.`,
+        breadcrumb: `Home / Services / ${card.title}`,
+        eyebrow: `${categoryTitle} service`,
+        heading: `${card.title} <span>Done Right.</span>`,
+        copy: card.copy,
+        heroImage: card.heroImage,
+        kicker: card.title,
+        sectionTitle: 'Explore More Anthem Services',
+        sectionCopy: `More ${categoryTitle.toLowerCase()} services from Anthem Air Conditioning & Plumbing.`,
+        cards: siblingCards.filter((item) => item.slug !== card.slug),
+        quality: {
+          label: `Quality ${card.title}`,
+          title: 'from a local team',
+          copy: [card.copy, 'Anthem brings practical diagnostics, clear communication, and clean workmanship to every service visit so you know what to expect before work begins.'],
+          features: ['Licensed & Insured', 'Clear Diagnostics', 'Clean Workmanship', 'Reliable Service'],
+          image: card.photo === 'service-photo-water' ? 'assets/service-water-heater-photo.webp' : 'assets/service-3-hvac.png',
+          alt: `${card.title} service from Anthem`,
+        },
+      });
+
+      plumbingServiceCards.forEach((card) => { servicePages[card.slug] = makeDetailServicePage(card, 'Plumbing', plumbingServiceCards); });
+      coolingServiceCards.forEach((card) => { servicePages[card.slug] = makeDetailServicePage(card, 'Cooling', coolingServiceCards); });
+      heatingServiceCards.forEach((card) => { servicePages[card.slug] = makeDetailServicePage(card, 'Heating', heatingServiceCards); });
+
       const serviceAliases = {
-        'ac-repair': 'hvac',
-        heating: 'hvac',
-        'drain-cleaning': 'services',
+        hvac: 'cooling',
+        ac: 'ac',
+        heater: 'heating',
+        'water-heaters': 'water-heater-repair',
       };
 
       const getServicePage = () => {
@@ -282,12 +378,15 @@
               if (whyHeading) whyHeading.textContent = 'Local Knowledge Backed by Real Experience';
               if (whyCopy) whyCopy.textContent = "Anthem Air Conditioning and Plumbing brings over 20 years of combined HVAC and plumbing experience to homes and businesses across the valley, with deep roots in the area and a clear focus on reliable, high-quality service. We've built a reputation for showing up on time, doing the job right, and earning our customers' trust.";
               if (whyImage) {
-                whyImage.src = 'assets/Anthem guys.webp';
-                whyImage.alt = 'Anthem local service team with vans in Anthem and the surrounding area';
+                whyImage.src = 'assets/group.png';
+                whyImage.alt = 'Anthem local service team';
               }
             }
 
             hero?.classList.add('service-hero-reference');
+            hero?.classList.toggle('plumbing-service-hero', currentPage === servicePages.plumbing);
+            hero?.classList.toggle('heating-service-hero', currentPage === servicePages.heating);
+            hero?.classList.toggle('spaced-service-hero', currentPage === servicePages.plumbing || currentPage === servicePages.heating);
             if (heroImage) heroImage.src = currentPage.heroImage || 'assets/anthem-reference.jpeg';
             heroForm?.remove();
             heroServiceButtons?.remove();
@@ -337,7 +436,7 @@
                     <h2>${currentPage.sectionTitle}</h2>
                     <p>${currentPage.sectionCopy}</p>
                   </div>
-                  <div class="service-page-grid${currentPage.cards.length === 5 ? ' is-five-card-grid' : ''}">
+                  <div class="service-page-grid${currentPage.cards.length === 8 ? ' is-eight-card-grid' : ''}${currentPage.cards.length === 5 ? ' is-five-card-grid' : ''}${currentPage.cards.length === 4 ? ' is-four-card-grid' : ''}">
                     ${currentPage.cards.map(renderCard).join('')}
                   </div>
                 </div>
