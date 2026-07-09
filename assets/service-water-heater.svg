@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 260" role="img" aria-label="Water heater service">
+  <rect width="640" height="260" fill="#f1f5f8"/>
+  <rect x="248" y="40" width="144" height="182" rx="34" fill="#ffffff" stroke="#b7c3cf" stroke-width="10"/>
+  <rect x="276" y="72" width="88" height="30" rx="15" fill="#17212b"/>
+  <circle cx="320" cy="142" r="34" fill="#e71922"/>
+  <path d="M320 118c17 20 25 34 25 47 0 18-12 30-25 30s-25-12-25-30c0-13 8-27 25-47Z" fill="#fff" opacity=".9"/>
+  <path d="M320 40V18M320 222v22M234 68h-52c-18 0-32 14-32 32v26M406 68h52c18 0 32 14 32 32v26" stroke="#17212b" stroke-width="14" stroke-linecap="round" fill="none"/>
+  <path d="M96 178c46-25 94-25 140 0s94 25 140 0 94-25 168 0" stroke="#e71922" stroke-width="12" stroke-linecap="round" fill="none" opacity=".8"/>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 260" role="img" aria-label="Pipe repair service">
+  <rect width="640" height="260" fill="#17212b"/>
+  <path d="M78 152h190c30 0 54-24 54-54V68h110v30c0 30 24 54 54 54h76" fill="none" stroke="#dfe7ee" stroke-width="44" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M78 152h190c30 0 54-24 54-54V68h110v30c0 30 24 54 54 54h76" fill="none" stroke="#93a2b0" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="292" y="38" width="170" height="60" rx="12" fill="#e71922" opacity=".95"/>
+  <path d="M330 68h96" stroke="#fff" stroke-width="12" stroke-linecap="round"/>
+  <path d="M232 184l68-68M260 206l68-68" stroke="#e71922" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="168" cy="152" r="19" fill="#e71922"/>
+  <circle cx="512" cy="152" r="19" fill="#e71922"/>
+</svg>

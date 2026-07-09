@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 260" role="img" aria-label="Sewer and drain pipe service">
+  <rect width="640" height="260" fill="#17212b"/>
+  <path d="M0 78c88-30 160-32 236-6 80 27 154 29 242 0 68-23 116-20 162-4v192H0z" fill="#263443"/>
+  <path d="M56 142h528" stroke="#8293a3" stroke-width="54" stroke-linecap="round"/>
+  <path d="M56 142h528" stroke="#dbe3ea" stroke-width="28" stroke-linecap="round"/>
+  <path d="M110 142h420" stroke="#637484" stroke-width="6" stroke-dasharray="20 18"/>
+  <circle cx="178" cy="142" r="74" fill="none" stroke="#e71922" stroke-width="16"/>
+  <path d="M126 103c38 24 72 54 104 93" stroke="#e71922" stroke-width="12" stroke-linecap="round" fill="none"/>
+  <path d="M430 66l74 46-74 46z" fill="#e71922" opacity=".92"/>
+  <circle cx="504" cy="142" r="26" fill="#fff" opacity=".92"/>
+</svg>

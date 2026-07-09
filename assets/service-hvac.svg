@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 260" role="img" aria-label="HVAC condenser service">
+  <rect width="640" height="260" fill="#eef2f6"/>
+  <rect x="70" y="178" width="500" height="34" rx="17" fill="#c9d4de"/>
+  <rect x="196" y="55" width="248" height="154" rx="18" fill="#17212b"/>
+  <rect x="220" y="82" width="200" height="100" rx="12" fill="#eef2f6"/>
+  <circle cx="320" cy="132" r="54" fill="#dbe3ea" stroke="#8b9aaa" stroke-width="8"/>
+  <path d="M320 78c18 35 18 73 0 108M266 132c35-18 73-18 108 0M282 94c37 10 64 37 76 76M358 94c-10 37-37 64-76 76" stroke="#e71922" stroke-width="11" stroke-linecap="round"/>
+  <path d="M104 72h76M110 104h58M492 72h76M480 104h70" stroke="#9eacba" stroke-width="14" stroke-linecap="round"/>
+  <path d="M98 142c38 17 74 17 112 0M430 142c38 17 74 17 112 0" stroke="#e71922" stroke-width="10" stroke-linecap="round" fill="none"/>
+</svg>

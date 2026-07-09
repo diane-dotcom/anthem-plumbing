@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Plumbing, Heating and Cooling Services | Anthem</title>
+      <meta
+        name="description"
+        content="Explore Anthem HVAC and water heater services for heating, cooling, hot water repair, replacement, and maintenance."
+      />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="services-page">
+    <header class="site-header" id="top">
+      <a class="brand" href="#top" aria-label="Anthem home">
+        <img class="brand-logo" src="assets/anthem-logo.svg" alt="Anthem Cooling, Heating & Plumbing" />
+      </a>
+
+      <button class="menu-button" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <a href="about.html">About Us</a>
+        <div class="nav-dropdown">
+          <button class="nav-trigger" type="button">Services</button>
+          <div class="nav-menu" aria-label="Services menu">
+            <a href="services.html">Plumbing Service</a>
+            <a href="services.html?service=drain-cleaning">Drain Cleaning</a>
+            <a href="services.html?service=water-heaters">Water Heaters</a>
+            <a href="services.html?service=ac-repair">AC Repair</a>
+            <a href="services.html?service=heating">Heating Service</a>
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <a class="nav-trigger" href="locations.html">Locations</a>
+          <div class="nav-menu" aria-label="Locations menu">
+            <a href="boulder.html">Anthem</a>
+            <a href="longmont.html">Phoenix</a>
+            <a href="broomfield.html">Glendale</a>
+            <a href="thornton.html">Peoria</a>
+            <a href="commerce-city.html">Scottsdale</a>
+            <a href="lakewood.html">Cave Creek</a>
+            <a href="arvada.html">New River</a>
+            <a href="lafayette.html">Deer Valley</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <a class="phone-link" href="tel:+17608952621" aria-label="Call Anthem at 760 895 2621">
+          <i data-lucide="phone-call"></i>
+          <span>Call<br /><strong>(760) 895-2621</strong></span>
+        </a>
+        <a class="button button-red header-schedule" href="#request">Schedule Now <i data-lucide="arrow-right"></i></a>
+      </div>
+    </header>
+
+    <main id="homepage-clone" aria-live="polite">
+      <span id="request"></span>
+      <span id="plumbing-repair"></span>
+      <span id="heating-service-anchor"></span>
+      <span id="water-heater-service"></span>
+      <span id="emergency-plumbing"></span>
+      <span id="contact"></span>
+      <span id="locations"></span>
+    </main>
+    <div id="homepage-footer-clone"></div>
+
+    <script>
+      const serviceCards = [
+        {
+          id: 'plumbing-service',
+          photo: 'service-photo-plumbing',
+          icon: 'wrench',
+          title: 'Plumbing',
+          copy: 'Leaks, fixtures, pipe repairs, clogs, and whole-home plumbing help.',
+          bullets: ['Leak detection and repair', 'Kitchen and bathroom plumbing', 'Fixture installs and replacements'],
+          href: 'plumbing.html',
+          action: 'View Plumbing Services',
+          service: 'Plumbing',
+        },
+        {
+          id: 'water-heater-service',
+          photo: 'service-photo-water',
+          icon: 'droplets',
+          title: 'Water Heaters',
+          copy: 'Water heater repairs, replacements, and hot water troubleshooting.',
+          bullets: ['Tank and tankless installs', 'No-hot-water diagnostics', 'Flush and maintenance service'],
+          href: 'water-heaters.html',
+          action: 'View Water Heater Services',
+          service: 'Water Heater',
+        },
+        {
+          id: 'hvac-service',
+          photo: 'service-photo-hvac',
+          icon: 'thermometer-sun',
+          title: 'HVAC',
+          copy: 'Heating and cooling diagnostics, repairs, tune-ups, and comfort troubleshooting.',
+          bullets: ['Heating and cooling diagnostics', 'AC and heater repairs', 'Seasonal tune-ups and maintenance'],
+          href: 'hvac.html',
+          action: 'View HVAC Services',
+          service: 'HVAC',
+        },
+      ];
+
+      const relatedServiceCards = (currentId) => serviceCards.filter((card) => card.id !== currentId);
+
+      const servicePages = {
+        services: {
+          title: 'Plumbing, HVAC and Water Heater Services | Anthem',
+          description: 'Explore Anthem plumbing, HVAC, and water heater services, including repairs, heating, cooling, hot water replacement, and maintenance.',
+          breadcrumb: 'Home / Services',
+          eyebrow: 'Your local plumbing, HVAC and water heater experts',
+          heading: 'Plumbing, HVAC &amp; Water Heater <span>Service Done Right.</span>',
+          copy: 'From plumbing repairs and no-hot-water calls to heating and cooling issues, Anthem keeps homes comfortable with honest pricing, clear communication, and dependable workmanship.',
+          highlights: [
+            { icon: 'wrench', title: 'Plumbing Help', copy: 'Reliable repair support for leaks, fixtures, clogs, and everyday plumbing problems.' },
+            { icon: 'thermometer-sun', title: 'Expert HVAC Help', copy: 'Reliable heating and cooling service for year-round comfort.' },
+            { icon: 'droplets', title: 'Water Heater Help', copy: 'Hot water repair and replacement support from local technicians.' },
+          ],
+          kicker: 'Our Services',
+          sectionTitle: 'Explore More Anthem Services',
+          sectionCopy: 'One trusted team for plumbing, HVAC, and water heater service across Anthem and the surrounding area.',
+          cards: serviceCards,
+          quality: {
+            label: 'Quality Plumbing, HVAC and Water Heater Service',
+            title: 'Built for Dependable Home Comfort',
+            copy: [
+              'Home-service problems can disrupt your day quickly, whether a plumbing issue appears, your AC is struggling, your heat is unreliable, or your water heater stops keeping up. Anthem handles each visit with practical diagnostics and clean workmanship.',
+              'Our team explains the issue, walks through the best options, and focuses on reliable repairs and replacements that keep your home running comfortably long after the visit.',
+            ],
+            features: ['Licensed & Insured', 'Expert Diagnostics', 'Clean Workmanship', 'Built for Daily Use'],
+            image: 'assets/service-plumbing-one.png',
+            alt: 'Anthem plumbing, HVAC, and water heater service team at work',
+          },
+        },
+        plumbing: {
+          title: 'Plumbing Service Anthem | Anthem Plumbing',
+          description: 'Plumbing service in Anthem for leaks, fixtures, pipe repairs, clogs, and whole-home plumbing help.',
+          breadcrumb: 'Home / Services / Plumbing',
+          eyebrow: 'Plumbing repair and service',
+          heading: 'Plumbing Service <span>Done Right.</span>',
+          copy: 'Anthem helps with leaks, fixtures, pipe repairs, clogs, and everyday plumbing issues with clean workmanship and clear communication.',
+          heroImage: 'assets/plumbing-anthem.png',
+          kicker: 'Plumbing',
+          sectionTitle: 'Explore More Anthem Services',
+          sectionCopy: 'One trusted local team for plumbing, water heater, and HVAC support across Anthem and the surrounding area.',
+          cards: relatedServiceCards('plumbing-service'),
+          quality: {
+            label: 'Quality Plumbing Service',
+            title: 'Built for Reliable Home Plumbing',
+            copy: [
+              'Plumbing problems are not just inconvenient. They can disrupt your day, damage your home, and create expensive surprises when they are not handled correctly. Anthem delivers plumbing solutions with precision, care, and integrity.',
+              'From hidden leaks and fixture updates to clogs and pipe repairs, our team inspects the system, explains the issue, and completes the work with clean workmanship and dependable materials.',
+            ],
+            features: ['Licensed & Insured', 'Plumbing Diagnostics', 'Clean Workmanship', 'Built for the Long Run'],
+            image: 'assets/plumbing-anthem.png',
+            alt: 'Anthem plumbing team handling home plumbing service',
+          },
+        },
+        'water-heaters': {
+          title: 'Water Heater Service Anthem | Anthem Plumbing',
+          description: 'Water heater repair and replacement in Anthem for tank, tankless, no-hot-water, and maintenance needs.',
+          breadcrumb: 'Home / Services / Water Heaters',
+          eyebrow: 'Hot water repair and replacement',
+          heading: 'Water Heater Service <span>Done Right.</span>',
+          copy: 'Anthem helps with no-hot-water calls, leaking tanks, replacement planning, and routine water heater service for Anthem homes.',
+          kicker: 'Water Heaters',
+          sectionTitle: 'Explore More Anthem Services',
+          sectionCopy: 'One trusted local team for water heater, plumbing, and HVAC support across Anthem and the surrounding area.',
+          cards: relatedServiceCards('water-heater-service'),
+          quality: {
+            label: 'Quality Water Heater Service',
+            title: 'Built for Dependable Hot Water',
+            copy: [
+              'Water heater problems can interrupt showers, laundry, dishes, and daily routines. Anthem provides practical diagnostics, repair guidance, and replacement support for tank and tankless systems.',
+              'From no-hot-water calls and leaking tanks to maintenance and installation planning, our team helps restore reliable hot water with clean workmanship and clear communication.',
+            ],
+            features: ['Licensed & Insured', 'Hot Water Experts', 'Clean Workmanship', 'Built for Daily Use'],
+            image: 'assets/service-water-heater-photo.webp',
+            alt: 'Anthem water heater service and replacement work',
+          },
+        },
+        hvac: {
+          title: 'HVAC Service Anthem | Anthem Heating and Cooling',
+          description: 'HVAC service in Anthem for heating, cooling, AC diagnostics, repairs, tune-ups, and comfort troubleshooting.',
+          breadcrumb: 'Home / Services / HVAC',
+          eyebrow: 'Heating and cooling service',
+          heading: 'HVAC Service <span>Done Right.</span>',
+          copy: 'When your home is not heating or cooling the way it should, Anthem provides practical HVAC diagnostics, repair support, and tune-ups for year-round comfort.',
+          kicker: 'HVAC',
+          sectionTitle: 'Explore More Anthem Services',
+          sectionCopy: 'One trusted local team for HVAC, plumbing, and water heater support across Anthem and the surrounding area.',
+          cards: relatedServiceCards('hvac-service'),
+          quality: {
+            label: 'Quality HVAC Service',
+            title: 'Built for Reliable Comfort',
+            copy: [
+              'HVAC problems can leave your home uncomfortable fast, especially when equipment is strained during extreme weather. Anthem provides straightforward diagnostics, practical repairs, and seasonal service for dependable comfort.',
+              'From weak airflow and warm air to heating issues, noisy equipment, and tune-ups, our technicians inspect the system, explain the issue, and complete the work with clean, careful workmanship.',
+            ],
+            features: ['Licensed & Insured', 'HVAC Diagnostics', 'Clean Workmanship', 'Built for Comfort'],
+            image: 'assets/service-3-hvac.png',
+            alt: 'Anthem HVAC technician servicing heating and cooling equipment',
+          },
+        },
+      };
+
+      const serviceAliases = {
+        'ac-repair': 'hvac',
+        heating: 'hvac',
+        'drain-cleaning': 'services',
+      };
+
+      const getServicePage = () => {
+        const serviceParam = new URLSearchParams(window.location.search).get('service');
+        const serviceKey = serviceAliases[serviceParam] || serviceParam;
+        if (serviceKey && servicePages[serviceKey]) return servicePages[serviceKey];
+        const slug = (window.location.pathname.split('/').filter(Boolean).pop() || 'services').replace(/\.html$/, '');
+        const slugKey = serviceAliases[slug] || slug;
+        return servicePages[slugKey] || servicePages.services;
+      };
+
+      const escapeAttr = (value) => String(value).replace(/&/g, '&amp;').replace(/"/g, '&quot;');
+      const renderHighlight = (highlight) => `
+        <div class="service-hero-highlight">
+          <i data-lucide="${escapeAttr(highlight.icon)}"></i>
+          <span><strong>${highlight.title}</strong><small>${highlight.copy}</small></span>
+        </div>
+      `;
+      const renderCard = (card) => `
+        <article class="service-page-card" id="${escapeAttr(card.id)}">
+          <div class="service-page-photo ${escapeAttr(card.photo)}"></div>
+          <div class="service-page-body">
+            <div class="service-page-title"><i data-lucide="${escapeAttr(card.icon)}"></i><h3>${card.title}</h3></div>
+            <p>${card.copy}</p>
+            <ul>${card.bullets.map((bullet) => `<li>${bullet}</li>`).join('')}</ul>
+            <a href="${escapeAttr(card.href)}" data-service="${escapeAttr(card.service)}">${card.action} <i data-lucide="arrow-right"></i></a>
+          </div>
+        </article>
+      `;
+
+      const currentPage = getServicePage();
+      document.title = currentPage.title;
+      document.querySelector('meta[name="description"]')?.setAttribute('content', currentPage.description);
+
+      fetch('/index.html')
+        .then((response) => response.text())
+        .then((html) => {
+          const source = new DOMParser().parseFromString(html, 'text/html');
+          const main = source.querySelector('main');
+          const footer = source.querySelector('footer');
+          if (main) {
+            const clonedMain = main.cloneNode(true);
+            const hero = clonedMain.querySelector('.hero');
+            const heroImage = hero?.querySelector('.hero-bg-photo');
+            const heroForm = hero?.querySelector('.request-card');
+            const heroServiceButtons = hero?.querySelector('.hero-service-highlights');
+            const heroContent = hero?.querySelector('.hero-content');
+            const servicesSection = clonedMain.querySelector('#services');
+            const contactSection = clonedMain.querySelector('#contact');
+            const reviewsSection = clonedMain.querySelector('#reviews');
+            const reviewDivider = clonedMain.querySelector('.why-review-divider');
+            const contactDivider = clonedMain.querySelector('.contact-location-divider');
+            const locationsSection = clonedMain.querySelector('#locations');
+            const whySection = clonedMain.querySelector('.why-choose');
+
+            if (whySection) {
+              const whyKicker = whySection.querySelector('.section-kicker');
+              const whyHeading = whySection.querySelector('h2');
+              const whyCopy = whySection.querySelector('.why-card > p:not(.section-kicker)');
+              const whyImage = whySection.querySelector('.why-photo-card img');
+              whyKicker?.remove();
+              if (whyHeading) whyHeading.textContent = 'Local Knowledge Backed by Real Experience';
+              if (whyCopy) whyCopy.textContent = "Anthem Air Conditioning and Plumbing brings over 20 years of combined HVAC and plumbing experience to homes and businesses across the valley, with deep roots in the area and a clear focus on reliable, high-quality service. We've built a reputation for showing up on time, doing the job right, and earning our customers' trust.";
+              if (whyImage) {
+                whyImage.src = 'assets/Anthem guys.webp';
+                whyImage.alt = 'Anthem local service team with vans in Anthem and the surrounding area';
+              }
+            }
+
+            hero?.classList.add('service-hero-reference');
+            if (heroImage) heroImage.src = currentPage.heroImage || 'assets/anthem-reference.jpeg';
+            heroForm?.remove();
+            heroServiceButtons?.remove();
+            reviewDivider?.remove();
+            reviewsSection?.remove();
+            contactSection?.remove();
+            contactDivider?.remove();
+            if (heroContent) {
+              heroContent.innerHTML = `
+                <p class="breadcrumb">${currentPage.breadcrumb}</p>
+                <p class="eyebrow">${currentPage.eyebrow}</p>
+                <h1>${currentPage.heading}</h1>
+                <p class="hero-copy">${currentPage.copy}</p>
+                <div class="hero-buttons">
+                  <a class="button button-red" href="tel:+17608952621"><i data-lucide="phone"></i> Call (760) 895-2621</a>
+                  <a class="button button-dark" href="locations.html">View Service Area <i data-lucide="arrow-right"></i></a>
+                </div>
+              `;
+            }
+            if (servicesSection) {
+              const quality = currentPage.quality;
+              servicesSection.insertAdjacentHTML('beforebegin', `
+                <section class="section service-quality-section" aria-labelledby="service-quality-title">
+                  <div class="service-quality-shell">
+                    <div class="service-quality-copy">
+                      <h2 id="service-quality-title"><span>${quality.label}</span> ${quality.title}</h2>
+                      ${quality.copy.map((paragraph) => `<p>${paragraph}</p>`).join('')}
+                      <div class="service-quality-rule" aria-hidden="true"></div>
+                      <div class="service-quality-features" aria-label="Anthem ${quality.label.toLowerCase()} standards">
+                        ${quality.features.map((feature, index) => {
+                          const icons = ['shield-check', 'settings', 'home', 'badge-check'];
+                          return `<div><i data-lucide="${icons[index]}"></i><strong>${feature}</strong></div>`;
+                        }).join('')}
+                      </div>
+                    </div>
+                    <div class="service-quality-photo">
+                      <img src="${escapeAttr(quality.image)}" alt="${escapeAttr(quality.alt)}" />
+                    </div>
+                  </div>
+                </section>
+              `);
+              servicesSection.className = 'section services service-section-reference';
+              servicesSection.innerHTML = `
+                <div class="services-page-shell">
+                  <div class="section-heading">
+                    <p class="section-kicker">${currentPage.kicker}</p>
+                    <h2>${currentPage.sectionTitle}</h2>
+                    <p>${currentPage.sectionCopy}</p>
+                  </div>
+                  <div class="service-page-grid${currentPage.cards.length === 5 ? ' is-five-card-grid' : ''}">
+                    ${currentPage.cards.map(renderCard).join('')}
+                  </div>
+                </div>
+              `;
+              const divider = servicesSection.nextElementSibling;
+              if (divider?.classList.contains('section-divider')) {
+                divider.className = 'service-core-divider';
+                divider.innerHTML = '<span></span><i data-lucide="wrench"></i><span></span>';
+              }
+            }
+            if (locationsSection) {
+              locationsSection.insertAdjacentHTML('beforebegin', '<span id="request" class="anchor-offset"></span><span id="contact" class="anchor-offset"></span>');
+              locationsSection.className = 'section locations-section service-location-section';
+              locationsSection.innerHTML = `
+                <div class="locations-shell">
+                  <div class="locations-heading">
+                    <p class="section-kicker">Locations Near You</p>
+                    <h2>Anthem Plumbing, Heating and Cooling Locations Near You</h2>
+                    <p>Serving local homeowners from Anthem Air Conditioning &amp; Plumbing Palm Desert.</p>
+                  </div>
+
+                  <div class="locations-grid">
+                    <div class="location-list" aria-label="Service locations">
+                      <button class="location-button is-active" type="button" data-location-button data-location="anthem-main">
+                        <i data-lucide="map-pin"></i>
+                        <span><strong>Anthem</strong><small>Palm Desert, CA</small></span>
+                      </button>
+                    </div>
+
+                    <div class="location-map" aria-label="Anthem Plumbing, Heating and Cooling map">
+                      <iframe data-location-map src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106192.11715733845!2d-116.52661138359373!3d33.72178999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80daff53f41139d5%3A0x15faa6d51cc79841!2sAnthem%20Air%20Conditioning%20%26%20Plumbing%20Palm%20Desert!5e0!3m2!1sen!2sph!4v1783532755887!5m2!1sen!2sph" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    </div>
+
+                    <aside class="location-details" aria-live="polite">
+                      <span class="location-details-label">Selected Location</span>
+                      <h3 data-location-title>Anthem</h3>
+                      <p data-location-copy>Anthem Air Conditioning &amp; Plumbing Palm Desert provides plumbing, HVAC, and water heater service support.</p>
+                      <div class="location-detail-list">
+                        <span><i data-lucide="clock-3"></i><strong data-location-response>Same-day appointments available</strong></span>
+                        <span><i data-lucide="wrench"></i><strong data-location-services>Plumbing, HVAC, and water heaters</strong></span>
+                        <span><i data-lucide="external-link"></i><strong><a data-location-link href="https://www.google.com/maps/search/?api=1&query=Anthem%20Air%20Conditioning%20%26%20Plumbing%20Palm%20Desert" target="_blank" rel="noreferrer">Open Location Map</a></strong></span>
+                        <span><i data-lucide="phone"></i><strong><a href="tel:+17608952621">Call (760) 895-2621</a></strong></span>
+                      </div>
+                      <a class="button button-red" href="tel:+17608952621">Schedule Service <i data-lucide="arrow-right"></i></a>
+                    </aside>
+                  </div>
+                </div>
+              `;
+            }
+            document.querySelector('#homepage-clone').replaceWith(clonedMain);
+          }
+          if (footer) document.querySelector('#homepage-footer-clone').replaceWith(footer.cloneNode(true));
+          if (window.lucide) window.lucide.createIcons({ attrs: { 'aria-hidden': 'true' } });
+          document.dispatchEvent(new Event('anthem:content-loaded'));
+          const hashMap = {
+            '#plumbing-repair': '#plumbing',
+            '#heating-service-anchor': '#heating-service',
+            '#water-heater-service': '#water-heaters',
+            '#emergency-plumbing': '#request',
+          };
+          const target = document.querySelector(hashMap[window.location.hash] || window.location.hash);
+          target?.scrollIntoView();
+        });
+    </script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
