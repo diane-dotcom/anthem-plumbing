@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=locations-dropdown-0711" />
   </head>
   <body class="services-page">
     <header class="site-header" id="top">
@@ -40,16 +40,10 @@
           </div>
         </div>
         <div class="nav-dropdown">
-          <a class="nav-trigger" href="locations.html">Locations</a>
+          <button class="nav-trigger" type="button">Locations</button>
           <div class="nav-menu" aria-label="Locations menu">
-            <a href="boulder.html">Anthem</a>
-            <a href="longmont.html">Phoenix</a>
-            <a href="broomfield.html">Glendale</a>
-            <a href="thornton.html">Peoria</a>
-            <a href="commerce-city.html">Scottsdale</a>
-            <a href="lakewood.html">Cave Creek</a>
-            <a href="arvada.html">New River</a>
-            <a href="lafayette.html">Deer Valley</a>
+            <a href="anthem-ac-plumbing.html">Coachella Valley</a>
+            <a href="anthem-palm-desert.html">Palm Desert</a>
           </div>
         </div>
       </nav>
@@ -116,11 +110,8 @@
         { slug: 'drain-cleaning', id: 'drain-cleaning', photo: 'service-photo-drain', icon: 'waves', title: 'Drain Cleaning', copy: 'Clog removal, slow drain service, and drain diagnostics for kitchens, baths, and main lines.', bullets: ['Clog removal', 'Slow drain diagnostics', 'Kitchen and bath drains'], href: 'services.html?service=drain-cleaning', action: 'View Drain Cleaning', service: 'Drain Cleaning' },
         { slug: 'emergency-plumbing', id: 'emergency-plumbing', photo: 'service-photo-emergency', icon: 'siren', title: 'Emergency Plumbing', copy: 'Fast help for urgent leaks, backups, broken fixtures, and plumbing problems that cannot wait.', bullets: ['Urgent plumbing support', 'Leak and backup help', 'After-hours response'], href: 'services.html?service=emergency-plumbing', action: 'View Emergency Plumbing', service: 'Emergency Plumbing' },
         { slug: 'sewer-repair', id: 'sewer-repair', photo: 'service-photo-pipe', icon: 'construction', title: 'Sewer Repair', copy: 'Sewer line diagnostics and repair guidance when backups, odors, or line damage need attention.', bullets: ['Sewer diagnostics', 'Repair recommendations', 'Backup support'], href: 'services.html?service=sewer-repair', action: 'View Sewer Repair', service: 'Sewer Repair' },
-        { slug: 'waterline-repair', id: 'waterline-repair', photo: 'service-photo-waterline', icon: 'droplets', title: 'Waterline Repair', copy: 'Waterline troubleshooting and repair for leaks, pressure issues, and damaged supply lines.', bullets: ['Leak detection', 'Pressure issue checks', 'Line repair options'], href: 'services.html?service=waterline-repair', action: 'View Waterline Repair', service: 'Waterline Repair' },
+        { slug: 'heater-repair', id: 'heater-repair', photo: 'service-photo-heater-repair', icon: 'thermometer-sun', title: 'Heater Repair', copy: 'Heating repair support for system issues that affect comfort, safety, or energy use.', bullets: ['Heater diagnostics', 'Repair recommendations', 'Comfort restoration'], href: 'services.html?service=heater-repair', action: 'View Heater Repair', service: 'Heater Repair' },
         { slug: 'water-heater-repair', id: 'water-heater-repair', photo: 'service-photo-water-heater-repair', icon: 'heater', title: 'Water Heater Repair', copy: 'Repair help for no-hot-water calls, leaking tanks, inconsistent temperatures, and water heater issues.', bullets: ['No-hot-water diagnostics', 'Leak checks', 'Repair and replacement guidance'], href: 'services.html?service=water-heater-repair', action: 'View Water Heater Repair', service: 'Water Heater Repair' },
-        { slug: 'gas-line-repair', id: 'gas-line-repair', photo: 'service-photo-gas', icon: 'flame', title: 'Gas Line Repair', copy: 'Careful gas line repair and diagnostics for safe, code-aware service around your home.', bullets: ['Gas line diagnostics', 'Safety-focused repairs', 'Clear service recommendations'], href: 'services.html?service=gas-line-repair', action: 'View Gas Line Repair', service: 'Gas Line Repair' },
-        { slug: 'water-softener-installation', id: 'water-softener-installation', photo: 'service-photo-softener', icon: 'sparkles', title: 'Water Softener Installation', copy: 'Water softener installation support for better water quality and protection from hard-water buildup.', bullets: ['System recommendations', 'Installation planning', 'Hard water solutions'], href: 'services.html?service=water-softener-installation', action: 'View Water Softener Installation', service: 'Water Softener Installation' },
-        { slug: 'hydro-jetting', id: 'hydro-jetting', photo: 'service-photo-hydro', icon: 'waves', title: 'Hydro Jetting', copy: 'High-powered drain cleaning for heavy buildup, grease, roots, and stubborn line blockages.', bullets: ['Heavy buildup removal', 'Line cleaning', 'Drain flow restoration'], href: 'services.html?service=hydro-jetting', action: 'View Hydro Jetting', service: 'Hydro Jetting' },
       ];
 
       const coolingServiceCards = [
@@ -144,7 +135,6 @@
         services: {
           title: 'Plumbing, HVAC and Water Heater Services | Anthem',
           description: 'Explore Anthem plumbing, HVAC, and water heater services, including repairs, heating, cooling, hot water replacement, and maintenance.',
-          breadcrumb: 'Home / Services',
           eyebrow: 'Your local plumbing, HVAC and water heater experts',
           heading: 'Plumbing, HVAC &amp; Water Heater <span>Service Done Right.</span>',
           copy: 'From plumbing repairs and no-hot-water calls to heating and cooling issues, Anthem keeps homes comfortable with honest pricing, clear communication, and dependable workmanship.',
@@ -172,11 +162,10 @@
         plumbing: {
           title: 'Plumbing Service Anthem | Anthem Plumbing',
           description: 'Plumbing service in Anthem for leaks, fixtures, pipe repairs, clogs, and whole-home plumbing help.',
-          breadcrumb: 'Home / Services / Plumbing',
-          eyebrow: 'Plumbing repair and service',
+          eyebrow: 'plumbing repair and service since 2002',
           heading: 'Plumbing Service <span>Done Right.</span>',
           copy: 'Anthem helps with leaks, fixtures, pipe repairs, clogs, and everyday plumbing issues with clean workmanship and clear communication.',
-          heroImage: 'assets/family.png',
+          heroImage: 'assets/van.png?v=plumbing-van-0710',
           kicker: 'Plumbing',
           sectionTitle: 'Explore More Anthem Services',
           sectionCopy: 'One trusted local team for plumbing, water heater, and HVAC support across Anthem and the surrounding area.',
@@ -196,7 +185,6 @@
         cooling: {
           title: 'Cooling Services Anthem | Anthem Air Conditioning',
           description: 'Cooling services in Anthem including AC repair, AC replacement, AC installation, insulation, and air duct cleaning.',
-          breadcrumb: 'Home / Services / Cooling',
           eyebrow: 'Cooling service and AC help',
           heading: 'Cooling Services <span>Done Right.</span>',
           copy: 'Anthem helps keep homes cool with AC repair, replacement, installation, insulation support, and air duct cleaning across the valley.',
@@ -217,8 +205,7 @@
         heating: {
           title: 'Heating Services Anthem | Anthem Heating',
           description: 'Heating services in Anthem including furnace repair, furnace replacement, heater repair, and heat pump repair.',
-          breadcrumb: 'Home / Services / Heating',
-          eyebrow: 'Heating service and repair',
+          eyebrow: 'heating service and repair since 2002',
           heading: 'Heating Services <span>Done Right.</span>',
           copy: 'Anthem helps restore dependable heat with furnace repair, furnace replacement, heater repair, and heat pump repair support.',
           heroImage: 'assets/heating.png',
@@ -238,7 +225,6 @@
         'water-heaters': {
           title: 'Water Heater Service Anthem | Anthem Plumbing',
           description: 'Water heater repair and replacement in Anthem for tank, tankless, no-hot-water, and maintenance needs.',
-          breadcrumb: 'Home / Services / Water Heaters',
           eyebrow: 'Hot water repair and replacement',
           heading: 'Water Heater Service <span>Done Right.</span>',
           copy: 'Anthem helps with no-hot-water calls, leaking tanks, replacement planning, and routine water heater service for Anthem homes.',
@@ -261,7 +247,6 @@
         hvac: {
           title: 'HVAC Service Anthem | Anthem Heating and Cooling',
           description: 'HVAC service in Anthem for heating, cooling, AC diagnostics, repairs, tune-ups, and comfort troubleshooting.',
-          breadcrumb: 'Home / Services / HVAC',
           eyebrow: 'Heating and cooling service',
           heading: 'HVAC Service <span>Done Right.</span>',
           copy: 'When your home is not heating or cooling the way it should, Anthem provides practical HVAC diagnostics, repair support, and tune-ups for year-round comfort.',
@@ -286,7 +271,6 @@
       const makeDetailServicePage = (card, categoryTitle, siblingCards) => ({
         title: `${card.title} Anthem | Anthem ${categoryTitle}`,
         description: `${card.title} service in Anthem and the surrounding valley from Anthem Air Conditioning & Plumbing.`,
-        breadcrumb: `Home / Services / ${card.title}`,
         eyebrow: `${categoryTitle} service`,
         heading: `${card.title} <span>Done Right.</span>`,
         copy: card.copy,
@@ -308,6 +292,7 @@
       plumbingServiceCards.forEach((card) => { servicePages[card.slug] = makeDetailServicePage(card, 'Plumbing', plumbingServiceCards); });
       coolingServiceCards.forEach((card) => { servicePages[card.slug] = makeDetailServicePage(card, 'Cooling', coolingServiceCards); });
       heatingServiceCards.forEach((card) => { servicePages[card.slug] = makeDetailServicePage(card, 'Heating', heatingServiceCards); });
+      servicePages.ac.eyebrow = 'AC service since 2002';
 
       const serviceAliases = {
         hvac: 'cooling',
@@ -375,8 +360,8 @@
               const whyCopy = whySection.querySelector('.why-card > p:not(.section-kicker)');
               const whyImage = whySection.querySelector('.why-photo-card img');
               whyKicker?.remove();
-              if (whyHeading) whyHeading.textContent = 'Local Knowledge Backed by Real Experience';
-              if (whyCopy) whyCopy.textContent = "Anthem Air Conditioning and Plumbing brings over 20 years of combined HVAC and plumbing experience to homes and businesses across the valley, with deep roots in the area and a clear focus on reliable, high-quality service. We've built a reputation for showing up on time, doing the job right, and earning our customers' trust.";
+              if (whyHeading) whyHeading.textContent = 'Locally Run, Not Private Equity';
+              if (whyCopy) whyCopy.textContent = "At Anthem Air Conditioning and Plumbing, we bring more than 20 years of combined HVAC and plumbing experience to residential and commercial customers across the Valley. From AC repair and installation to plumbing service, heating repairs, water heaters, drains, and leak detection, our team is here to keep your home or business comfortable, safe, and running smoothly.";
               if (whyImage) {
                 whyImage.src = 'assets/group.png';
                 whyImage.alt = 'Anthem local service team';
@@ -391,43 +376,19 @@
             heroForm?.remove();
             heroServiceButtons?.remove();
             reviewDivider?.remove();
-            reviewsSection?.remove();
             contactSection?.remove();
             contactDivider?.remove();
             if (heroContent) {
               heroContent.innerHTML = `
-                <p class="breadcrumb">${currentPage.breadcrumb}</p>
                 <p class="eyebrow">${currentPage.eyebrow}</p>
                 <h1>${currentPage.heading}</h1>
                 <p class="hero-copy">${currentPage.copy}</p>
                 <div class="hero-buttons">
                   <a class="button button-red" href="tel:+17608952621"><i data-lucide="phone"></i> Call (760) 895-2621</a>
-                  <a class="button button-dark" href="locations.html">View Service Area <i data-lucide="arrow-right"></i></a>
                 </div>
               `;
             }
             if (servicesSection) {
-              const quality = currentPage.quality;
-              servicesSection.insertAdjacentHTML('beforebegin', `
-                <section class="section service-quality-section" aria-labelledby="service-quality-title">
-                  <div class="service-quality-shell">
-                    <div class="service-quality-copy">
-                      <h2 id="service-quality-title"><span>${quality.label}</span> ${quality.title}</h2>
-                      ${quality.copy.map((paragraph) => `<p>${paragraph}</p>`).join('')}
-                      <div class="service-quality-rule" aria-hidden="true"></div>
-                      <div class="service-quality-features" aria-label="Anthem ${quality.label.toLowerCase()} standards">
-                        ${quality.features.map((feature, index) => {
-                          const icons = ['shield-check', 'settings', 'home', 'badge-check'];
-                          return `<div><i data-lucide="${icons[index]}"></i><strong>${feature}</strong></div>`;
-                        }).join('')}
-                      </div>
-                    </div>
-                    <div class="service-quality-photo">
-                      <img src="${escapeAttr(quality.image)}" alt="${escapeAttr(quality.alt)}" />
-                    </div>
-                  </div>
-                </section>
-              `);
               servicesSection.className = 'section services service-section-reference';
               servicesSection.innerHTML = `
                 <div class="services-page-shell">
@@ -455,29 +416,33 @@
                   <div class="locations-heading">
                     <p class="section-kicker">Locations Near You</p>
                     <h2>Anthem Plumbing, Heating and Cooling Locations Near You</h2>
-                    <p>Serving local homeowners from Anthem Air Conditioning &amp; Plumbing Palm Desert.</p>
+                    <p>Serving local homeowners from two Anthem Air Conditioning &amp; Plumbing locations.</p>
                   </div>
 
                   <div class="locations-grid">
                     <div class="location-list" aria-label="Service locations">
                       <button class="location-button is-active" type="button" data-location-button data-location="anthem-main">
                         <i data-lucide="map-pin"></i>
-                        <span><strong>Anthem</strong><small>Palm Desert, CA</small></span>
+                        <span><strong>Coachella Valley</strong><small>Coachella Valley, CA</small></span>
+                      </button>
+                      <button class="location-button" type="button" data-location-button data-location="anthem-palm-desert">
+                        <i data-lucide="map-pin"></i>
+                        <span><strong>Palm Desert</strong><small>Palm Desert, CA</small></span>
                       </button>
                     </div>
 
                     <div class="location-map" aria-label="Anthem Plumbing, Heating and Cooling map">
-                      <iframe data-location-map src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106192.11715733845!2d-116.52661138359373!3d33.72178999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80daff53f41139d5%3A0x15faa6d51cc79841!2sAnthem%20Air%20Conditioning%20%26%20Plumbing%20Palm%20Desert!5e0!3m2!1sen!2sph!4v1783532755887!5m2!1sen!2sph" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                      <iframe data-location-map src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3320.987941352639!2d-116.14851082392171!3d33.657474338471516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80da588fac1fb185%3A0x6a1b0c0c6f0c386d!2sAnthem%20Air%20Conditioning%20%26%20Plumbing!5e0!3m2!1sen!2sph!4v1783697114450!5m2!1sen!2sph" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
                     </div>
 
                     <aside class="location-details" aria-live="polite">
                       <span class="location-details-label">Selected Location</span>
-                      <h3 data-location-title>Anthem</h3>
-                      <p data-location-copy>Anthem Air Conditioning &amp; Plumbing Palm Desert provides plumbing, HVAC, and water heater service support.</p>
+                      <h3 data-location-title>Coachella Valley</h3>
+                      <p data-location-copy>Anthem Air Conditioning &amp; Plumbing provides plumbing, heating, cooling, water heater, and emergency service support from this Coachella Valley location.</p>
                       <div class="location-detail-list">
                         <span><i data-lucide="clock-3"></i><strong data-location-response>Same-day appointments available</strong></span>
                         <span><i data-lucide="wrench"></i><strong data-location-services>Plumbing, HVAC, and water heaters</strong></span>
-                        <span><i data-lucide="external-link"></i><strong><a data-location-link href="https://www.google.com/maps/search/?api=1&query=Anthem%20Air%20Conditioning%20%26%20Plumbing%20Palm%20Desert" target="_blank" rel="noreferrer">Open Location Map</a></strong></span>
+                        <span><i data-lucide="external-link"></i><strong><a data-location-link href="https://www.google.com/maps/search/?api=1&query=Anthem%20Air%20Conditioning%20%26%20Plumbing" target="_blank" rel="noreferrer">Open Location Map</a></strong></span>
                         <span><i data-lucide="phone"></i><strong><a href="tel:+17608952621">Call (760) 895-2621</a></strong></span>
                       </div>
                       <a class="button button-red" href="tel:+17608952621">Schedule Service <i data-lucide="arrow-right"></i></a>
@@ -502,6 +467,6 @@
         });
     </script>
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
-    <script src="script.js"></script>
+    <script src="script.js?v=locations-dropdown-0711"></script>
   </body>
 </html>
