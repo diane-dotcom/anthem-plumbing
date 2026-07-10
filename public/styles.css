@@ -1529,16 +1529,21 @@ body.services-page .service-hero-reference {
   color: #fff;
   display: block;
   grid-template-columns: none;
-  min-height: 560px;
+  min-height: 680px;
   padding: clamp(62px, 7vw, 86px) max(28px, calc((100vw - 1328px) / 2)) clamp(54px, 6vw, 74px);
 }
 
 body.services-page .service-hero-reference .hero-inner {
-  display: block;
-  margin: 0;
-  max-width: none;
-  position: static;
-  width: auto;
+  align-items: center;
+  display: grid;
+  gap: clamp(34px, 4vw, 60px);
+  grid-template-columns: minmax(0, 1fr) minmax(390px, 450px);
+  margin: 0 auto;
+  max-width: 1328px;
+  padding-left: 0;
+  padding-right: 0;
+  position: relative;
+  width: 100%;
 }
 
 body.services-page .service-hero-reference .hero-art {
@@ -1557,7 +1562,13 @@ body.services-page .service-hero-reference .hero-photo-scrim {
 
 body.services-page .service-hero-reference .hero-content {
   margin-left: 0;
-  max-width: 875px;
+  max-width: 760px;
+  transform: none;
+}
+
+body.services-page .service-hero-reference .request-card {
+  justify-self: end;
+  max-width: 450px;
   transform: none;
 }
 
@@ -1626,7 +1637,7 @@ body.services-page .heating-service-hero .hero-bg-photo {
 body.services-page .service-hero-reference .hero-copy {
   font-size: clamp(18.5px, 1.59vw, 22.8px);
   line-height: 1.62;
-  max-width: 794px;
+  max-width: 700px;
 }
 
 body.services-page .service-core-divider {
@@ -4027,8 +4038,18 @@ body.boulder-page:not([data-location-default]) .faq-accordion details[open] summ
 }
 
 @media (max-width: 1120px) {
+  body.services-page .service-hero-reference .hero-inner {
+    grid-template-columns: 1fr;
+    max-width: 760px;
+  }
+
   body.services-page .service-hero-reference .hero-content {
     transform: translateX(0);
+  }
+
+  body.services-page .service-hero-reference .request-card {
+    justify-self: center;
+    max-width: 532px;
   }
 
   body.services-page .service-hero-highlights {
@@ -4105,6 +4126,10 @@ body.boulder-page:not([data-location-default]) .faq-accordion details[open] summ
     min-height: 0;
     padding-left: 18px;
     padding-right: 18px;
+  }
+
+  body.services-page .service-hero-reference .hero-inner {
+    gap: 28px;
   }
 
   body.services-page .service-hero-reference .hero-content {

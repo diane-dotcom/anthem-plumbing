@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=locations-dropdown-0711" />
+    <link rel="stylesheet" href="styles.css?v=services-hero-form-0711" />
   </head>
   <body class="services-page">
     <header class="site-header" id="top">
@@ -373,7 +373,6 @@
             hero?.classList.toggle('heating-service-hero', currentPage === servicePages.heating);
             hero?.classList.toggle('spaced-service-hero', currentPage === servicePages.plumbing || currentPage === servicePages.heating);
             if (heroImage) heroImage.src = currentPage.heroImage || 'assets/anthem-reference.jpeg';
-            heroForm?.remove();
             heroServiceButtons?.remove();
             reviewDivider?.remove();
             contactSection?.remove();
@@ -387,6 +386,10 @@
                   <a class="button button-red" href="tel:+17608952621"><i data-lucide="phone"></i> Call (760) 895-2621</a>
                 </div>
               `;
+            }
+            if (heroForm) {
+              heroForm.querySelector('.request-card-top h2').textContent = 'Request Service';
+              heroForm.querySelector('.request-card-top p').textContent = 'Tell us what you need and Anthem will follow up to schedule your service.';
             }
             if (servicesSection) {
               servicesSection.className = 'section services service-section-reference';
@@ -409,7 +412,7 @@
               }
             }
             if (locationsSection) {
-              locationsSection.insertAdjacentHTML('beforebegin', '<span id="request" class="anchor-offset"></span><span id="contact" class="anchor-offset"></span>');
+              locationsSection.insertAdjacentHTML('beforebegin', '<span id="contact" class="anchor-offset"></span>');
               locationsSection.className = 'section locations-section service-location-section';
               locationsSection.innerHTML = `
                 <div class="locations-shell">
