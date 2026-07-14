@@ -5096,6 +5096,39 @@ video {
     padding-top: 0;
   }
 
+  main > .hero-review-strip {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 10px;
+    justify-content: center;
+    min-height: 58px;
+    padding: 10px 14px;
+    text-align: center;
+    width: 100%;
+  }
+
+  main > .hero-review-strip > span:last-child {
+    flex: 1 0 100%;
+    font-size: 11.5px;
+    line-height: 1.25;
+    white-space: normal;
+  }
+
+  main > .hero-review-strip .google-logo {
+    height: 18px;
+    width: 18px;
+  }
+
+  main > .hero-review-strip .stars svg {
+    height: 13px;
+    width: 13px;
+  }
+
+  main > .hero-review-strip + .hero {
+    padding-top: 44px;
+  }
+
   .hero > .hero-review-strip,
   .hero > .google-review-banner {
     align-items: center !important;
