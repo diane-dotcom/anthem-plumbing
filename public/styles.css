@@ -5042,27 +5042,36 @@ video {
   }
 
   .brand {
-    width: min(204px, 50vw);
+    width: min(156px, 42vw);
   }
 
   .brand-logo {
-    max-height: 46px;
+    max-height: 44px;
   }
 
   .phone-link {
     border-radius: 999px;
+    letter-spacing: .02em;
     min-height: 40px;
     padding: 0 12px;
+    white-space: nowrap;
   }
 
   .phone-link span {
-    display: none;
+    align-items: center;
+    display: inline-flex;
+    font-size: 10px;
+    gap: 4px;
+    line-height: 1;
   }
 
   .phone-link svg {
-    display: block;
-    height: 18px;
-    width: 18px;
+    display: none;
+  }
+
+  .phone-link strong {
+    font-size: 10px;
+    letter-spacing: .02em;
   }
 
   .menu-button {
@@ -5080,10 +5089,76 @@ video {
     padding-top: 42px;
   }
 
+  .hero {
+    align-items: stretch;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 0;
+  }
+
+  .hero > .hero-review-strip,
+  .hero > .google-review-banner {
+    align-items: center !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px 10px !important;
+    justify-content: center !important;
+    left: auto !important;
+    min-height: 58px !important;
+    margin-bottom: 34px !important;
+    padding: 10px 14px !important;
+    position: relative !important;
+    right: auto !important;
+    text-align: center;
+    top: auto !important;
+    width: 100%;
+  }
+
+  .hero > .hero-review-strip > span:last-child,
+  .hero > .google-review-banner > span:last-child {
+    flex: 1 0 100%;
+    font-size: 11.5px;
+    line-height: 1.25;
+    white-space: normal;
+  }
+
+  .hero > .hero-review-strip .google-logo,
+  .hero > .google-review-banner .google-logo {
+    height: 18px;
+    width: 18px;
+  }
+
+  .hero > .hero-review-strip .stars svg,
+  .hero > .google-review-banner .stars svg {
+    height: 13px;
+    width: 13px;
+  }
+
   .hero-inner,
   body.services-page .service-hero-reference .hero-inner {
     padding-left: 18px;
     padding-right: 18px;
+  }
+
+  .hero > .hero-review-strip + .hero-art + .hero-inner,
+  .hero > .google-review-banner + .hero-art + .hero-inner {
+    padding-top: 10px;
+  }
+
+  .hero-content,
+  .hero .eyebrow,
+  .hero h1,
+  .hero-copy,
+  .hero-buttons,
+  .trust-pills {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .hero .eyebrow {
+    justify-content: center;
+    transform: none;
   }
 
   .hero-buttons,
@@ -5196,7 +5271,18 @@ video {
   }
 
   .brand {
-    width: min(186px, 48vw);
+    width: min(142px, 39vw);
+  }
+
+  .phone-link {
+    min-height: 38px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .phone-link span,
+  .phone-link strong {
+    font-size: 9.5px;
   }
 
   .hero h1,
