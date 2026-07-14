@@ -5281,8 +5281,9 @@ video {
     border: 1px solid rgba(6,11,16,.1);
     border-radius: 12px;
     box-shadow: 0 12px 28px rgba(6,11,16,.1);
-    margin: 0 14px 6px;
-    padding: 6px;
+    gap: 4px;
+    margin: 6px 14px 14px;
+    padding: 10px 8px;
     width: calc(100% - 28px);
   }
 
@@ -5290,8 +5291,8 @@ video {
   .site-header.is-open .nav-menu[aria-label="Locations menu"] a {
     color: var(--ink);
     font-size: 11px;
-    min-height: 30px;
-    padding: 0 10px;
+    min-height: 32px;
+    padding: 0 12px;
     text-align: left;
   }
 
