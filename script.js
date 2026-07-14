@@ -134,8 +134,9 @@ const closeDropdowns = () => {
 document.addEventListener('click', (event) => {
   const trigger = event.target.closest('.nav-trigger');
   const dropdown = trigger?.closest('.nav-dropdown');
+  const isMobileNavOpen = header?.classList.contains('is-open') && window.matchMedia('(max-width: 1120px)').matches;
 
-  if (trigger && dropdown?.querySelector('.nav-menu') && trigger.tagName !== 'A') {
+  if (trigger && dropdown?.querySelector('.nav-menu') && (trigger.tagName !== 'A' || isMobileNavOpen)) {
     event.preventDefault();
     const isOpen = dropdown.classList.contains('is-open');
     closeDropdowns();

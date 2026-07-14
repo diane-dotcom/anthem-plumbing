@@ -5201,14 +5201,24 @@ video {
   }
 
   .site-header.is-open .main-nav {
-    align-items: flex-start;
-    gap: 12px;
+    align-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, #0a55bf 0%, #0545a7 100%);
+    gap: 9px;
+    height: calc(100vh - 70px);
+    justify-content: center;
+    justify-items: center;
+    margin-left: -12px;
+    max-height: calc(100vh - 70px);
+    min-height: calc(100vh - 70px);
+    padding: 24px 0 36px;
+    width: 100vw;
   }
 
   .site-header.is-open .main-nav > a,
   .site-header.is-open .main-nav > .nav-dropdown,
   .site-header.is-open .main-nav > .nav-dropdown > .nav-trigger {
-    width: min(100%, 220px);
+    width: min(100%, 165px);
   }
 
   .site-header.is-open .main-nav > a,
@@ -5219,22 +5229,37 @@ video {
     border-radius: 10px;
     color: #fff;
     display: flex;
-    font-size: 18px;
+    font-size: 13.5px;
     font-weight: 900;
     justify-content: space-between;
     letter-spacing: .16em;
     line-height: 1;
-    min-height: 64px;
-    padding: 0 20px;
+    min-height: 48px;
+    padding: 0 15px;
     text-decoration: none;
   }
 
   .site-header.is-open .main-nav > .nav-dropdown > a.nav-trigger::after {
-    content: none !important;
+    color: currentColor;
+    content: "+" !important;
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 1;
+  }
+
+  .site-header.is-open .main-nav > .nav-dropdown.is-open > a.nav-trigger::after {
+    content: "-" !important;
   }
 
   .site-header.is-open .nav-dropdown > .nav-menu {
-    width: min(100%, 220px);
+    width: min(100%, 165px);
+  }
+
+  .site-header.is-open .nav-menu a,
+  .site-header.is-open .nav-menu[aria-label="Locations menu"] a {
+    font-size: 11px;
+    min-height: 36px;
+    padding: 0 10px;
   }
 
   .hero-content,
