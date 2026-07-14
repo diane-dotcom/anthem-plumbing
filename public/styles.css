@@ -5281,19 +5281,41 @@ video {
     border: 1px solid rgba(6,11,16,.1);
     border-radius: 12px;
     box-shadow: 0 12px 28px rgba(6,11,16,.1);
+    display: none !important;
     gap: 4px;
+    left: auto !important;
     margin: 6px 14px 14px;
+    min-width: 0;
+    opacity: 1 !important;
     padding: 10px 8px;
+    pointer-events: auto !important;
+    position: static !important;
+    transform: none !important;
+    visibility: visible !important;
+    width: calc(100% - 28px);
+  }
+
+  .site-header.is-open .nav-dropdown.is-open > .nav-menu {
+    display: grid !important;
+  }
+
+  .site-header.is-open .nav-dropdown > .nav-menu[aria-label="Locations menu"] {
+    margin: 6px 14px 14px;
+    max-width: none;
+    min-width: 0;
     width: calc(100% - 28px);
   }
 
   .site-header.is-open .nav-menu a,
   .site-header.is-open .nav-menu[aria-label="Locations menu"] a {
     color: var(--ink);
+    display: flex;
+    align-items: center;
     font-size: 11px;
     min-height: 32px;
     padding: 0 12px;
     text-align: left;
+    white-space: normal;
   }
 
   .site-header.is-open .nav-menu a:hover,
