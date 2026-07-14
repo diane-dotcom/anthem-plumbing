@@ -5200,6 +5200,43 @@ video {
     text-align: center;
   }
 
+  .site-header.is-open .main-nav {
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .site-header.is-open .main-nav > a,
+  .site-header.is-open .main-nav > .nav-dropdown,
+  .site-header.is-open .main-nav > .nav-dropdown > .nav-trigger {
+    width: min(100%, 220px);
+  }
+
+  .site-header.is-open .main-nav > a,
+  .site-header.is-open .main-nav > .nav-dropdown > .nav-trigger {
+    align-items: center;
+    background: rgba(255,255,255,.1);
+    border: 0;
+    border-radius: 10px;
+    color: #fff;
+    display: flex;
+    font-size: 18px;
+    font-weight: 900;
+    justify-content: space-between;
+    letter-spacing: .16em;
+    line-height: 1;
+    min-height: 64px;
+    padding: 0 20px;
+    text-decoration: none;
+  }
+
+  .site-header.is-open .main-nav > .nav-dropdown > a.nav-trigger::after {
+    content: none !important;
+  }
+
+  .site-header.is-open .nav-dropdown > .nav-menu {
+    width: min(100%, 220px);
+  }
+
   .hero-content,
   .hero .eyebrow,
   .hero h1,
