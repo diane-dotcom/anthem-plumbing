@@ -5098,10 +5098,14 @@ video {
 
   main > .hero-review-strip {
     align-items: center;
+    border-radius: 0;
+    box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
     gap: 8px 10px;
     justify-content: center;
+    margin: 0;
+    max-width: none;
     min-height: 58px;
     padding: 10px 14px;
     text-align: center;
@@ -5126,7 +5130,7 @@ video {
   }
 
   main > .hero-review-strip + .hero {
-    padding-top: 44px;
+    padding-top: clamp(72px, 12vw, 92px);
   }
 
   .hero > .hero-review-strip,
@@ -5138,7 +5142,8 @@ video {
     justify-content: center !important;
     left: auto !important;
     min-height: 58px !important;
-    margin-bottom: 34px !important;
+    margin: 0 0 clamp(54px, 10vw, 76px) !important;
+    max-width: none;
     padding: 10px 14px !important;
     position: relative !important;
     right: auto !important;
@@ -5175,7 +5180,7 @@ video {
 
   .hero > .hero-review-strip + .hero-art + .hero-inner,
   .hero > .google-review-banner + .hero-art + .hero-inner {
-    padding-top: 10px;
+    padding-top: 0;
   }
 
   .hero-content,
