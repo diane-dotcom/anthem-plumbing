@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=services-hero-form-0711" />
+    <link rel="stylesheet" href="styles.css?v=location-family-0715" />
   </head>
   <body class="services-page">
     <header class="site-header" id="top">
@@ -28,22 +28,40 @@
 
       <nav class="main-nav" aria-label="Primary navigation">
         <a href="/">Home</a>
-        <a href="about.html">About Us</a>
         <div class="nav-dropdown">
-          <button class="nav-trigger" type="button">Services</button>
-          <div class="nav-menu" aria-label="Services menu">
-            <a href="services.html">Plumbing Service</a>
+          <button class="nav-trigger" type="button">Plumbing</button>
+          <div class="nav-menu" aria-label="Plumbing menu">
+            <a href="plumbing.html">Plumbing</a>
             <a href="services.html?service=drain-cleaning">Drain Cleaning</a>
-            <a href="services.html?service=water-heaters">Water Heaters</a>
-            <a href="services.html?service=ac-repair">AC Repair</a>
-            <a href="services.html?service=heating">Heating Service</a>
+            <a href="sewer-line-repair-and-replacement.html">Sewer Line Repair and Replacement</a>
+            <a href="water-heater-repair-and-replacement.html">Water Heater Repair and Replacement</a>
+            <a href="hydro-jetting.html">Hydro Jetting</a>
           </div>
         </div>
         <div class="nav-dropdown">
-          <button class="nav-trigger" type="button">Locations</button>
+          <button class="nav-trigger" type="button">HVAC</button>
+          <div class="nav-menu" aria-label="HVAC menu">
+            <a href="services.html?service=ac-repair">AC Repair</a>
+            <a href="services.html?service=ac-replacement">AC Replacement</a>
+            <a href="services.html?service=ac-installation">AC Installation</a>
+            <a href="services.html?service=furnace-repair">Furnace Repair</a>
+            <a href="services.html?service=furnace-replacement">Furnace Replacement</a>
+            <a href="services.html?service=insulation">Insulation</a>
+            <a href="services.html?service=air-duct-cleaning">Air Duct Cleaning</a>
+          </div>
+        </div>
+        <a href="about.html">About us</a>
+        <div class="nav-dropdown">
+          <a class="nav-trigger" href="locations.html">Locations</a>
           <div class="nav-menu" aria-label="Locations menu">
-            <a href="anthem-ac-plumbing.html">Coachella Valley</a>
+            <a href="longmont.html">Palm Springs</a>
             <a href="anthem-palm-desert.html">Palm Desert</a>
+            <a href="thornton.html">Indio</a>
+            <a href="broomfield.html">Cathedral City</a>
+            <a href="lafayette.html">La Quinta</a>
+            <a href="arvada.html">Coachella</a>
+            <a href="lakewood.html">Desert Hot Springs</a>
+            <a href="commerce-city.html">Rancho Mirage</a>
           </div>
         </div>
       </nav>
@@ -62,7 +80,6 @@
       <span id="plumbing-repair"></span>
       <span id="heating-service-anchor"></span>
       <span id="water-heater-service"></span>
-      <span id="emergency-plumbing"></span>
       <span id="contact"></span>
       <span id="locations"></span>
     </main>
@@ -106,27 +123,45 @@
       ];
 
       const plumbingServiceCards = [
-        { slug: 'ac', id: 'ac', photo: 'service-photo-hvac', icon: 'snowflake', title: 'AC', copy: 'Air conditioning diagnostics and repair support for homes that need fast cooling help.', bullets: ['AC troubleshooting', 'Cooling system checks', 'Comfort recommendations'], href: 'services.html?service=ac', action: 'View AC Service', service: 'AC', heroImage: 'assets/air.png' },
-        { slug: 'drain-cleaning', id: 'drain-cleaning', photo: 'service-photo-drain', icon: 'waves', title: 'Drain Cleaning', copy: 'Clog removal, slow drain service, and drain diagnostics for kitchens, baths, and main lines.', bullets: ['Clog removal', 'Slow drain diagnostics', 'Kitchen and bath drains'], href: 'services.html?service=drain-cleaning', action: 'View Drain Cleaning', service: 'Drain Cleaning' },
-        { slug: 'emergency-plumbing', id: 'emergency-plumbing', photo: 'service-photo-emergency', icon: 'siren', title: 'Emergency Plumbing', copy: 'Fast help for urgent leaks, backups, broken fixtures, and plumbing problems that cannot wait.', bullets: ['Urgent plumbing support', 'Leak and backup help', 'After-hours response'], href: 'services.html?service=emergency-plumbing', action: 'View Emergency Plumbing', service: 'Emergency Plumbing' },
-        { slug: 'sewer-repair', id: 'sewer-repair', photo: 'service-photo-pipe', icon: 'construction', title: 'Sewer Repair', copy: 'Sewer line diagnostics and repair guidance when backups, odors, or line damage need attention.', bullets: ['Sewer diagnostics', 'Repair recommendations', 'Backup support'], href: 'services.html?service=sewer-repair', action: 'View Sewer Repair', service: 'Sewer Repair' },
-        { slug: 'heater-repair', id: 'heater-repair', photo: 'service-photo-heater-repair', icon: 'thermometer-sun', title: 'Heater Repair', copy: 'Heating repair support for system issues that affect comfort, safety, or energy use.', bullets: ['Heater diagnostics', 'Repair recommendations', 'Comfort restoration'], href: 'services.html?service=heater-repair', action: 'View Heater Repair', service: 'Heater Repair' },
-        { slug: 'water-heater-repair', id: 'water-heater-repair', photo: 'service-photo-water-heater-repair', icon: 'heater', title: 'Water Heater Repair', copy: 'Repair help for no-hot-water calls, leaking tanks, inconsistent temperatures, and water heater issues.', bullets: ['No-hot-water diagnostics', 'Leak checks', 'Repair and replacement guidance'], href: 'services.html?service=water-heater-repair', action: 'View Water Heater Repair', service: 'Water Heater Repair' },
+        { slug: 'drain-cleaning', id: 'drain-cleaning', photo: 'service-photo-drain', icon: 'waves', title: 'Drain Cleaning', copy: 'Drain cleaning for clogged sinks, tubs, toilets, kitchen drains, bathroom drains, and main-line backups that need fast attention.', bullets: ['Clog removal', 'Slow drain diagnostics', 'Kitchen, bath, and main drains'], href: 'services.html?service=drain-cleaning', action: 'View Drain Cleaning', service: 'Drain Cleaning' },
+        { slug: 'sewer-repair', id: 'sewer-repair', photo: 'service-photo-pipe', icon: 'construction', title: 'Sewer Line Repair and Replacement', copy: 'Sewer line diagnostics, repair, and replacement guidance for backups, odors, damaged lines, root intrusion, and recurring drain issues.', bullets: ['Sewer line diagnostics', 'Repair and replacement options', 'Backup and odor support'], href: 'sewer-line-repair-and-replacement.html', action: 'View Sewer Line Service', service: 'Sewer Line Repair and Replacement' },
+        { slug: 'water-heater-repair', id: 'water-heater-repair', photo: 'service-photo-water-heater-repair', icon: 'heater', title: 'Water Heater Repair and Replacement', copy: 'Water heater repair and replacement support for no hot water, leaking tanks, inconsistent temperatures, aging units, and tank or tankless upgrades.', bullets: ['No-hot-water diagnostics', 'Leak and temperature checks', 'Repair and replacement planning'], href: 'water-heater-repair-and-replacement.html', action: 'View Water Heater Service', service: 'Water Heater Repair and Replacement' },
+        { slug: 'hydro-jetting', id: 'hydro-jetting', photo: 'service-photo-hydro', icon: 'waves', title: 'Hydro Jetting', copy: 'High-pressure hydro jetting for stubborn buildup, grease, sludge, roots, and recurring clogs that need a deeper line cleaning.', bullets: ['Heavy buildup removal', 'Grease and sludge clearing', 'Drain flow restoration'], href: 'hydro-jetting.html', action: 'View Hydro Jetting', service: 'Hydro Jetting' },
       ];
 
+      const plumbingOverviewCard = {
+        id: 'plumbing-service',
+        photo: 'service-photo-plumbing',
+        icon: 'wrench',
+        title: 'Plumbing',
+        copy: 'Leaks, fixtures, pipe repairs, clogs, and whole-home plumbing help from a local team.',
+        bullets: ['Leak and fixture repairs', 'Pipe and drain diagnostics', 'Whole-home plumbing support'],
+        href: 'plumbing.html',
+        action: 'View Plumbing',
+        service: 'Plumbing',
+      };
+
       const coolingServiceCards = [
-        { slug: 'ac-repair', id: 'ac-repair', photo: 'service-photo-hvac', icon: 'snowflake', title: 'AC Repair', copy: 'Cooling diagnostics and repairs for weak airflow, warm air, strange noises, and AC breakdowns.', bullets: ['AC diagnostics', 'Cooling repairs', 'System troubleshooting'], href: 'services.html?service=ac-repair', action: 'View AC Repair', service: 'AC Repair' },
-        { slug: 'ac-replacement', id: 'ac-replacement', photo: 'service-photo-hvac', icon: 'refresh-cw', title: 'AC Replacement', copy: 'Replacement planning for aging, inefficient, or unreliable cooling systems.', bullets: ['Replacement options', 'Efficiency guidance', 'Comfort planning'], href: 'services.html?service=ac-replacement', action: 'View AC Replacement', service: 'AC Replacement' },
-        { slug: 'ac-installation', id: 'ac-installation', photo: 'service-photo-hvac', icon: 'settings', title: 'AC Installation', copy: 'AC installation support for dependable cooling, correct sizing, and long-term performance.', bullets: ['New AC installs', 'System sizing', 'Clean installation'], href: 'services.html?service=ac-installation', action: 'View AC Installation', service: 'AC Installation' },
-        { slug: 'insulation', id: 'insulation', photo: 'service-photo-hvac', icon: 'home', title: 'Insulation', copy: 'Insulation support to help improve comfort, reduce heat gain, and support cooling performance.', bullets: ['Comfort improvements', 'Efficiency support', 'Home performance guidance'], href: 'services.html?service=insulation', action: 'View Insulation', service: 'Insulation' },
-        { slug: 'air-duct-cleaning', id: 'air-duct-cleaning', photo: 'service-photo-hvac', icon: 'wind', title: 'Air Duct Cleaning', copy: 'Duct cleaning support for airflow, dust concerns, and cleaner whole-home comfort.', bullets: ['Duct cleaning', 'Airflow support', 'Cleaner comfort'], href: 'services.html?service=air-duct-cleaning', action: 'View Air Duct Cleaning', service: 'Air Duct Cleaning' },
+        { slug: 'ac-repair', id: 'ac-repair', photo: 'service-photo-hvac', icon: 'snowflake', title: 'AC Repair', copy: 'AC repair for weak airflow, warm air, short cycling, unusual noises, and cooling systems that stop keeping up.', bullets: ['AC diagnostics', 'Cooling repairs', 'System troubleshooting'], href: 'services.html?service=ac-repair', action: 'View AC Repair', service: 'AC Repair' },
+        { slug: 'ac-replacement', id: 'ac-replacement', photo: 'service-photo-ac-replacement', icon: 'refresh-cw', title: 'AC Replacement', copy: 'AC replacement planning for older, inefficient, or unreliable systems when repair is no longer the best long-term choice.', bullets: ['Replacement options', 'Efficiency guidance', 'Comfort planning'], href: 'services.html?service=ac-replacement', action: 'View AC Replacement', service: 'AC Replacement' },
+        { slug: 'ac-installation', id: 'ac-installation', photo: 'service-photo-ac-installation', icon: 'settings', title: 'AC Installation', copy: 'AC installation for new systems, correctly sized equipment, clean setup, and dependable cooling performance.', bullets: ['New AC installs', 'System sizing', 'Clean installation'], href: 'services.html?service=ac-installation', action: 'View AC Installation', service: 'AC Installation' },
+        { slug: 'insulation', id: 'insulation', photo: 'service-photo-insulation', icon: 'home', title: 'Insulation', copy: 'Insulation service to reduce heat gain, improve home comfort, and help your heating and cooling system perform more efficiently.', bullets: ['Comfort improvements', 'Efficiency support', 'Home performance guidance'], href: 'services.html?service=insulation', action: 'View Insulation', service: 'Insulation' },
+        { slug: 'air-duct-cleaning', id: 'air-duct-cleaning', photo: 'service-photo-air-duct-cleaning', icon: 'wind', title: 'Air Duct Cleaning', copy: 'Air duct cleaning for dusty vents, airflow concerns, indoor air quality issues, and cleaner whole-home comfort.', bullets: ['Duct cleaning', 'Airflow support', 'Cleaner comfort'], href: 'services.html?service=air-duct-cleaning', action: 'View Air Duct Cleaning', service: 'Air Duct Cleaning' },
       ];
 
       const heatingServiceCards = [
-        { slug: 'furnace-repair', id: 'furnace-repair', photo: 'service-photo-furnace-repair', icon: 'flame', title: 'Furnace Repair', copy: 'Furnace diagnostics and repair support for unreliable heat, ignition issues, and airflow problems.', bullets: ['Furnace diagnostics', 'Heating repairs', 'Safety checks'], href: 'services.html?service=furnace-repair', action: 'View Furnace Repair', service: 'Furnace Repair' },
-        { slug: 'furnace-replacement', id: 'furnace-replacement', photo: 'service-photo-furnace-replacement', icon: 'replace', title: 'Furnace Replacement', copy: 'Replacement guidance for older furnaces that are inefficient, unreliable, or costly to repair.', bullets: ['Replacement options', 'Efficiency guidance', 'Comfort planning'], href: 'services.html?service=furnace-replacement', action: 'View Furnace Replacement', service: 'Furnace Replacement' },
-        { slug: 'heater-repair', id: 'heater-repair', photo: 'service-photo-heater-repair', icon: 'thermometer-sun', title: 'Heater Repair', copy: 'Heating repair support for system issues that affect comfort, safety, or energy use.', bullets: ['Heater diagnostics', 'Repair recommendations', 'Comfort restoration'], href: 'services.html?service=heater-repair', action: 'View Heater Repair', service: 'Heater Repair' },
-        { slug: 'heat-pump-repair', id: 'heat-pump-repair', photo: 'service-photo-heat-pump-repair', icon: 'fan', title: 'Heat Pump Repair', copy: 'Heat pump diagnostics and repairs for heating, cooling, airflow, and performance problems.', bullets: ['Heat pump diagnostics', 'Heating and cooling repair', 'Performance checks'], href: 'services.html?service=heat-pump-repair', action: 'View Heat Pump Repair', service: 'Heat Pump Repair' },
+        { slug: 'furnace-repair', id: 'furnace-repair', photo: 'service-photo-furnace-repair', icon: 'flame', title: 'Furnace Repair', copy: 'Furnace repair for unreliable heat, ignition issues, airflow problems, unusual smells, and systems that will not start correctly.', bullets: ['Furnace diagnostics', 'Heating repairs', 'Safety checks'], href: 'services.html?service=furnace-repair', action: 'View Furnace Repair', service: 'Furnace Repair' },
+        { slug: 'furnace-replacement', id: 'furnace-replacement', photo: 'service-photo-furnace-replacement', icon: 'replace', title: 'Furnace Replacement', copy: 'Furnace replacement guidance for older, inefficient, or unreliable heating systems that need a better long-term solution.', bullets: ['Replacement options', 'Efficiency guidance', 'Comfort planning'], href: 'services.html?service=furnace-replacement', action: 'View Furnace Replacement', service: 'Furnace Replacement' },
+      ];
+
+      const hvacServiceCards = [
+        coolingServiceCards[0],
+        coolingServiceCards[1],
+        coolingServiceCards[2],
+        heatingServiceCards[0],
+        heatingServiceCards[1],
+        coolingServiceCards[3],
+        coolingServiceCards[4],
       ];
 
       const relatedServiceCards = (currentId) => serviceCards.filter((card) => card.id !== currentId);
@@ -204,10 +239,10 @@
         },
         heating: {
           title: 'Heating Services Anthem | Anthem Heating',
-          description: 'Heating services in Anthem including furnace repair, furnace replacement, heater repair, and heat pump repair.',
+          description: 'Heating services in Anthem including furnace repair and furnace replacement.',
           eyebrow: 'heating service and repair since 2002',
           heading: 'Heating Services <span>Done Right.</span>',
-          copy: 'Anthem helps restore dependable heat with furnace repair, furnace replacement, heater repair, and heat pump repair support.',
+          copy: 'Anthem helps restore dependable heat with furnace repair and furnace replacement support.',
           heroImage: 'assets/heating.png',
           kicker: 'Heating',
           sectionTitle: 'Explore More Anthem Services',
@@ -216,7 +251,7 @@
           quality: {
             label: 'Quality Heating Service',
             title: 'Built for Safe, Steady Heat',
-            copy: ['Heating problems can affect comfort, safety, and energy use when equipment is not working correctly. Anthem provides careful diagnostics and practical repair support.', 'From furnace issues to heat pump performance concerns, our team explains the problem clearly and completes the work with clean, careful workmanship.'],
+            copy: ['Heating problems can affect comfort, safety, and energy use when equipment is not working correctly. Anthem provides careful diagnostics and practical repair support.', 'From furnace repairs to replacement planning, our team explains the problem clearly and completes the work with clean, careful workmanship.'],
             features: ['Licensed & Insured', 'Heating Diagnostics', 'Clean Workmanship', 'Built for Comfort'],
             image: 'assets/service-3-hvac.png',
             alt: 'Anthem heating technician servicing heating equipment',
@@ -253,7 +288,7 @@
           kicker: 'HVAC',
           sectionTitle: 'Explore More Anthem Services',
           sectionCopy: 'One trusted local team for HVAC, plumbing, and water heater support across Anthem and the surrounding area.',
-          cards: relatedServiceCards('hvac-service'),
+          cards: hvacServiceCards,
           quality: {
             label: 'Quality HVAC Service',
             title: 'Built for Reliable Comfort',
@@ -267,6 +302,9 @@
           },
         },
       };
+
+      const sharedServiceHeroImage = servicePages.plumbing.heroImage;
+      ['hvac', 'cooling', 'heating'].forEach((key) => { servicePages[key].heroImage = sharedServiceHeroImage; });
 
       const makeDetailServicePage = (card, categoryTitle, siblingCards) => ({
         title: `${card.title} Anthem | Anthem ${categoryTitle}`,
@@ -289,16 +327,37 @@
         },
       });
 
-      plumbingServiceCards.forEach((card) => { servicePages[card.slug] = makeDetailServicePage(card, 'Plumbing', plumbingServiceCards); });
-      coolingServiceCards.forEach((card) => { servicePages[card.slug] = makeDetailServicePage(card, 'Cooling', coolingServiceCards); });
-      heatingServiceCards.forEach((card) => { servicePages[card.slug] = makeDetailServicePage(card, 'Heating', heatingServiceCards); });
-      servicePages.ac.eyebrow = 'AC service since 2002';
+      plumbingServiceCards.forEach((card) => {
+        const page = makeDetailServicePage(card, 'Plumbing', plumbingServiceCards);
+        page.heroImage = servicePages.plumbing.heroImage;
+        page.sectionTitle = 'Explore More Anthem Services';
+        page.sectionCopy = 'Plumbing services from Anthem Air Conditioning & Plumbing.';
+        page.cards = [plumbingOverviewCard, ...plumbingServiceCards.filter((item) => item.slug !== card.slug)];
+        servicePages[card.slug] = page;
+      });
+      coolingServiceCards.forEach((card) => {
+        const page = makeDetailServicePage(card, 'HVAC', hvacServiceCards);
+        page.heroImage = sharedServiceHeroImage;
+        page.currentServiceSlug = card.slug;
+        page.cards = hvacServiceCards.filter((item) => item.slug !== card.slug);
+        servicePages[card.slug] = page;
+      });
+      heatingServiceCards.forEach((card) => {
+        const page = makeDetailServicePage(card, 'HVAC', hvacServiceCards);
+        page.heroImage = sharedServiceHeroImage;
+        page.currentServiceSlug = card.slug;
+        page.cards = hvacServiceCards.filter((item) => item.slug !== card.slug);
+        servicePages[card.slug] = page;
+      });
+      servicePages.ac = { ...servicePages.cooling, title: 'AC Service Anthem | Anthem Air Conditioning', eyebrow: 'AC service since 2002', heading: 'AC Service <span>Done Right.</span>', kicker: 'AC' };
 
       const serviceAliases = {
-        hvac: 'cooling',
+        hvac: 'hvac',
         ac: 'ac',
         heater: 'heating',
         'water-heaters': 'water-heater-repair',
+        'sewer-line-repair-and-replacement': 'sewer-repair',
+        'water-heater-repair-and-replacement': 'water-heater-repair',
       };
 
       const getServicePage = () => {
@@ -369,7 +428,7 @@
             }
 
             hero?.classList.add('service-hero-reference');
-            hero?.classList.toggle('plumbing-service-hero', currentPage === servicePages.plumbing);
+            hero?.classList.toggle('plumbing-service-hero', currentPage.heroImage === servicePages.plumbing.heroImage);
             hero?.classList.toggle('heating-service-hero', currentPage === servicePages.heating);
             hero?.classList.toggle('spaced-service-hero', currentPage === servicePages.plumbing || currentPage === servicePages.heating);
             if (heroImage) heroImage.src = currentPage.heroImage || 'assets/anthem-reference.jpeg';
@@ -392,6 +451,7 @@
               heroForm.querySelector('.request-card-top p').textContent = 'Tell us what you need and Anthem will follow up to schedule your service.';
             }
             if (servicesSection) {
+              const visibleCards = currentPage.cards.filter((card) => card.slug !== currentPage.currentServiceSlug);
               servicesSection.className = 'section services service-section-reference';
               servicesSection.innerHTML = `
                 <div class="services-page-shell">
@@ -400,8 +460,8 @@
                     <h2>${currentPage.sectionTitle}</h2>
                     <p>${currentPage.sectionCopy}</p>
                   </div>
-                  <div class="service-page-grid${currentPage.cards.length === 8 ? ' is-eight-card-grid' : ''}${currentPage.cards.length === 5 ? ' is-five-card-grid' : ''}${currentPage.cards.length === 4 ? ' is-four-card-grid' : ''}">
-                    ${currentPage.cards.map(renderCard).join('')}
+                  <div class="service-page-grid${visibleCards.length === 8 ? ' is-eight-card-grid' : ''}${visibleCards.length === 5 ? ' is-five-card-grid' : ''}${visibleCards.length === 4 ? ' is-four-card-grid' : ''}">
+                    ${visibleCards.map(renderCard).join('')}
                   </div>
                 </div>
               `;
@@ -419,18 +479,42 @@
                   <div class="locations-heading">
                     <p class="section-kicker">Locations Near You</p>
                     <h2>Anthem Plumbing, Heating and Cooling Locations Near You</h2>
-                    <p>Serving local homeowners from two Anthem Air Conditioning &amp; Plumbing locations.</p>
+                    <p>Serving local homeowners from eight Anthem Air Conditioning &amp; Plumbing locations.</p>
                   </div>
 
                   <div class="locations-grid">
                     <div class="location-list" aria-label="Service locations">
-                      <button class="location-button is-active" type="button" data-location-button data-location="anthem-main">
+                      <button class="location-button is-active" type="button" data-location-button data-location="palm-springs">
                         <i data-lucide="map-pin"></i>
-                        <span><strong>Coachella Valley</strong><small>Coachella Valley, CA</small></span>
+                        <span><strong>Palm Springs</strong><small>Palm Springs, CA</small></span>
                       </button>
-                      <button class="location-button" type="button" data-location-button data-location="anthem-palm-desert">
+                      <button class="location-button" type="button" data-location-button data-location="palm-desert">
                         <i data-lucide="map-pin"></i>
                         <span><strong>Palm Desert</strong><small>Palm Desert, CA</small></span>
+                      </button>
+                      <button class="location-button" type="button" data-location-button data-location="indio">
+                        <i data-lucide="map-pin"></i>
+                        <span><strong>Indio</strong><small>Indio, CA</small></span>
+                      </button>
+                      <button class="location-button" type="button" data-location-button data-location="cathedral-city">
+                        <i data-lucide="map-pin"></i>
+                        <span><strong>Cathedral City</strong><small>Cathedral City, CA</small></span>
+                      </button>
+                      <button class="location-button" type="button" data-location-button data-location="la-quinta">
+                        <i data-lucide="map-pin"></i>
+                        <span><strong>La Quinta</strong><small>La Quinta, CA</small></span>
+                      </button>
+                      <button class="location-button" type="button" data-location-button data-location="coachella">
+                        <i data-lucide="map-pin"></i>
+                        <span><strong>Coachella</strong><small>Coachella, CA</small></span>
+                      </button>
+                      <button class="location-button" type="button" data-location-button data-location="desert-hot-springs">
+                        <i data-lucide="map-pin"></i>
+                        <span><strong>Desert Hot Springs</strong><small>Desert Hot Springs, CA</small></span>
+                      </button>
+                      <button class="location-button" type="button" data-location-button data-location="rancho-mirage">
+                        <i data-lucide="map-pin"></i>
+                        <span><strong>Rancho Mirage</strong><small>Rancho Mirage, CA</small></span>
                       </button>
                     </div>
 
@@ -440,8 +524,8 @@
 
                     <aside class="location-details" aria-live="polite">
                       <span class="location-details-label">Selected Location</span>
-                      <h3 data-location-title>Coachella Valley</h3>
-                      <p data-location-copy>Anthem Air Conditioning &amp; Plumbing provides plumbing, heating, cooling, water heater, and emergency service support from this Coachella Valley location.</p>
+                      <h3 data-location-title>Palm Springs</h3>
+                      <p data-location-copy>Anthem Air Conditioning &amp; Plumbing serves Palm Springs with plumbing, cooling, heating, water heater, and emergency service support.</p>
                       <div class="location-detail-list">
                         <span><i data-lucide="clock-3"></i><strong data-location-response>Same-day appointments available</strong></span>
                         <span><i data-lucide="wrench"></i><strong data-location-services>Plumbing, HVAC, and water heaters</strong></span>
@@ -463,13 +547,12 @@
             '#plumbing-repair': '#plumbing',
             '#heating-service-anchor': '#heating-service',
             '#water-heater-service': '#water-heaters',
-            '#emergency-plumbing': '#request',
           };
           const target = document.querySelector(hashMap[window.location.hash] || window.location.hash);
           target?.scrollIntoView();
         });
     </script>
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
-    <script src="script.js?v=locations-dropdown-0711"></script>
+    <script src="script.js?v=location-family-0715"></script>
   </body>
 </html>

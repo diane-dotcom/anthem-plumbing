@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=locations-dropdown-0711" />
+    <link rel="stylesheet" href="styles.css?v=location-family-0715" />
   </head>
   <body>
     <header class="site-header" id="top">
@@ -28,22 +28,40 @@
 
       <nav class="main-nav" aria-label="Primary navigation">
         <a href="/">Home</a>
-        <a href="about.html">About Us</a>
         <div class="nav-dropdown">
-          <button class="nav-trigger" type="button">Services</button>
-          <div class="nav-menu" aria-label="Services menu">
-            <a href="services.html">Plumbing Service</a>
+          <button class="nav-trigger" type="button">Plumbing</button>
+          <div class="nav-menu" aria-label="Plumbing menu">
+            <a href="plumbing.html">Plumbing</a>
             <a href="services.html?service=drain-cleaning">Drain Cleaning</a>
-            <a href="services.html?service=water-heaters">Water Heaters</a>
-            <a href="services.html?service=ac-repair">AC Repair</a>
-            <a href="services.html?service=heating">Heating Service</a>
+            <a href="sewer-line-repair-and-replacement.html">Sewer Line Repair and Replacement</a>
+            <a href="water-heater-repair-and-replacement.html">Water Heater Repair and Replacement</a>
+            <a href="hydro-jetting.html">Hydro Jetting</a>
           </div>
         </div>
         <div class="nav-dropdown">
-          <button class="nav-trigger" type="button">Locations</button>
+          <button class="nav-trigger" type="button">HVAC</button>
+          <div class="nav-menu" aria-label="HVAC menu">
+            <a href="services.html?service=ac-repair">AC Repair</a>
+            <a href="services.html?service=ac-replacement">AC Replacement</a>
+            <a href="services.html?service=ac-installation">AC Installation</a>
+            <a href="services.html?service=furnace-repair">Furnace Repair</a>
+            <a href="services.html?service=furnace-replacement">Furnace Replacement</a>
+            <a href="services.html?service=insulation">Insulation</a>
+            <a href="services.html?service=air-duct-cleaning">Air Duct Cleaning</a>
+          </div>
+        </div>
+        <a href="about.html">About us</a>
+        <div class="nav-dropdown">
+          <a class="nav-trigger" href="locations.html">Locations</a>
           <div class="nav-menu" aria-label="Locations menu">
-            <a href="anthem-ac-plumbing.html">Coachella Valley</a>
+            <a href="longmont.html">Palm Springs</a>
             <a href="anthem-palm-desert.html">Palm Desert</a>
+            <a href="thornton.html">Indio</a>
+            <a href="broomfield.html">Cathedral City</a>
+            <a href="lafayette.html">La Quinta</a>
+            <a href="arvada.html">Coachella</a>
+            <a href="lakewood.html">Desert Hot Springs</a>
+            <a href="commerce-city.html">Rancho Mirage</a>
           </div>
         </div>
       </nav>
@@ -89,7 +107,7 @@
         <div class="hero-inner">
           <div class="hero-content">
             <p class="eyebrow">Your local neighborhood experts &middot; Since 2002</p>
-            <h1>Arizona's Trusted <span class="hero-nowrap"><span>Plumbing</span>, <span>Heating</span> &amp; <span>Cooling</span></span> <span class="hero-company-line">Company</span></h1>
+            <h1>California's Trusted <span class="hero-nowrap"><span>Plumbing</span>, <span>Heating</span> &amp; <span>Cooling</span></span> <span class="hero-company-line">Company</span></h1>
             <p class="hero-copy">
               From burst pipes to no-cooling emergencies, Anthem helps local homeowners with honest pricing, dependable plumbing repairs, HVAC service, and same-day emergency support.
             </p>
@@ -109,7 +127,7 @@
               <h2>Request Your Service</h2>
               <p>Fast scheduling - most calls handled same day. No after-hours upcharge.</p>
             </div>
-            <div class="rating-line"><img class="google-logo" src="assets/google-g-logo.svg" alt="" /><span class="stars"><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></span><strong>4.9</strong><span>/ 5 &middot; 1,000+ Google reviews</span></div>
+            <div class="rating-line"><img class="google-logo" src="assets/google-g-logo.svg" alt="" /><span class="stars"><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></span><span class="rating-summary"><strong>4.9</strong> / 5 &middot; 1,000+ Google reviews</span></div>
 
             <fieldset>
               <legend>What do you need?</legend>
@@ -123,7 +141,7 @@
               <label>Full Name <input name="name" placeholder="Jane Doe" required /></label>
               <label>Phone <input name="phone" placeholder="(760) 555-0123" required /></label>
             </div>
-            <label class="service-address-field">Service Address <input name="address" placeholder="Street, Anthem, AZ" required /></label>
+            <label class="service-address-field">Service Address <input name="address" placeholder="Street, Palm Springs, CA" required /></label>
             <button class="button button-red full" type="submit">Get My Free Estimate <i data-lucide="arrow-right"></i></button>
             <small>Licensed &amp; insured &middot; No-obligation quote</small>
             <p class="form-message" role="status" aria-live="polite"></p>
@@ -189,7 +207,7 @@
               <div><i data-lucide="users-round"></i><h3>Local &amp; Family-Owned</h3><p>Proudly serving Anthem and the surrounding area since 2002. We're your neighbors.</p></div>
               <div><i data-lucide="clock-3"></i><h3>On-Time, Every Time</h3><p>We value your time with reliable service and on-time arrivals.</p></div>
             </div>
-            <div class="trust-note"><i data-lucide="shield-star"></i> Trusted by homeowners across Arizona and the surrounding area since 2002.</div>
+            <div class="trust-note"><i data-lucide="shield-star"></i> Trusted by homeowners across California and the surrounding area since 2002.</div>
           </div>
           <div class="why-photo-card">
             <img src="assets/group.png" alt="Anthem local service team" />
@@ -269,72 +287,47 @@
         </div>
       </section>
 
-      <section class="section contact-section" id="contact">
-        <div class="contact-container">
-          <div class="contact-layout">
-            <div class="contact-copy">
-              <p class="contact-kicker">Get In Touch</p>
-              <h2>We're Ready When You Need Us</h2>
-              <span class="contact-rule" aria-hidden="true"></span>
-              <p>
-                Anthem Plumbing, Heating and Cooling delivers fast, honest, and dependable service for Anthem and the surrounding area homes. Tell us what you need and we'll help you solve the plumbing, heating, or cooling issue.
-              </p>
-
-              <div class="contact-highlights">
-                <div><i data-lucide="badge-check"></i><strong>Upfront Pricing</strong><span>No surprises. Just honest, transparent pricing.</span></div>
-                <div><i data-lucide="clock-3"></i><strong>On-Time Service</strong><span>We respect your time and show up when we say we will.</span></div>
-                <div><i data-lucide="wrench"></i><strong>Quality Workmanship</strong><span>We do the job right the first time, every time.</span></div>
-              </div>
-            </div>
-
-            <form class="contact-form-card" data-lead-form>
-              <div class="contact-form-icon"><i data-lucide="clipboard-list"></i></div>
-              <h2>Get Your Free Estimate</h2>
-              <p>Quick, easy, and no obligation.</p>
-
-              <div class="contact-form-grid">
-                <label><i data-lucide="user"></i><input name="name" placeholder="Full Name" required /></label>
-                <label><i data-lucide="phone"></i><input name="phone" placeholder="Phone Number" required /></label>
-                <label class="wide"><i data-lucide="mail"></i><input name="email" type="email" placeholder="Email Address" /></label>
-                <label class="wide"><i data-lucide="wrench"></i><select name="service" required><option value="" disabled selected>Service Needed</option><option value="Plumbing">Plumbing</option><option value="AC">AC</option><option value="Heating">Heating</option><option value="Emergency">Emergency</option></select></label>
-                <label class="wide"><i data-lucide="message-circle"></i><textarea name="message" placeholder="How can we help?"></textarea></label>
-              </div>
-
-              <button class="button button-red full" type="submit">Request My Estimate <i data-lucide="arrow-right"></i></button>
-              <small><i data-lucide="lock"></i> Your information is safe and secure.</small>
-              <p class="form-message" role="status" aria-live="polite"></p>
-            </form>
-          </div>
-
-          <div class="contact-info-row">
-            <div><i data-lucide="map-pin"></i><span>Service Area</span><strong>Proudly serving Anthem and the surrounding area</strong></div>
-            <div><i data-lucide="clock"></i><span>Office Hours</span><strong>Mon - Sun: 7:00 AM - 10:00 PM</strong></div>
-            <div><i data-lucide="siren"></i><span>Emergency Help</span><strong>We're here 24/7</strong><em>Call anytime for immediate assistance.</em></div>
-          </div>
-        </div>
-      </section>
-
-      <div class="contact-location-divider" aria-hidden="true">
-        <span></span>
-      </div>
-
       <section class="section locations-section" id="locations">
         <div class="locations-shell">
           <div class="locations-heading">
             <p class="section-kicker">Locations Near You</p>
             <h2>Anthem Plumbing, Heating and Cooling Locations Near You</h2>
-            <p>Serving local homeowners from two Anthem Air Conditioning &amp; Plumbing locations.</p>
+            <p>Serving local homeowners from eight Anthem Air Conditioning &amp; Plumbing locations.</p>
           </div>
 
           <div class="locations-grid">
             <div class="location-list" aria-label="Service locations">
-              <button class="location-button is-active" type="button" data-location-button data-location="anthem-main">
+              <button class="location-button is-active" type="button" data-location-button data-location="palm-springs">
                 <i data-lucide="map-pin"></i>
-                <span><strong>Coachella Valley</strong><small>Coachella Valley, CA</small></span>
+                <span><strong>Palm Springs</strong><small>Palm Springs, CA</small></span>
               </button>
-              <button class="location-button" type="button" data-location-button data-location="anthem-palm-desert">
+              <button class="location-button" type="button" data-location-button data-location="palm-desert">
                 <i data-lucide="map-pin"></i>
                 <span><strong>Palm Desert</strong><small>Palm Desert, CA</small></span>
+              </button>
+              <button class="location-button" type="button" data-location-button data-location="indio">
+                <i data-lucide="map-pin"></i>
+                <span><strong>Indio</strong><small>Indio, CA</small></span>
+              </button>
+              <button class="location-button" type="button" data-location-button data-location="cathedral-city">
+                <i data-lucide="map-pin"></i>
+                <span><strong>Cathedral City</strong><small>Cathedral City, CA</small></span>
+              </button>
+              <button class="location-button" type="button" data-location-button data-location="la-quinta">
+                <i data-lucide="map-pin"></i>
+                <span><strong>La Quinta</strong><small>La Quinta, CA</small></span>
+              </button>
+              <button class="location-button" type="button" data-location-button data-location="coachella">
+                <i data-lucide="map-pin"></i>
+                <span><strong>Coachella</strong><small>Coachella, CA</small></span>
+              </button>
+              <button class="location-button" type="button" data-location-button data-location="desert-hot-springs">
+                <i data-lucide="map-pin"></i>
+                <span><strong>Desert Hot Springs</strong><small>Desert Hot Springs, CA</small></span>
+              </button>
+              <button class="location-button" type="button" data-location-button data-location="rancho-mirage">
+                <i data-lucide="map-pin"></i>
+                <span><strong>Rancho Mirage</strong><small>Rancho Mirage, CA</small></span>
               </button>
             </div>
 
@@ -344,8 +337,8 @@
 
             <aside class="location-details" aria-live="polite">
               <span class="location-details-label">Selected Location</span>
-              <h3 data-location-title>Coachella Valley</h3>
-              <p data-location-copy>Anthem Air Conditioning &amp; Plumbing provides plumbing, heating, cooling, water heater, and emergency service support from this Coachella Valley location.</p>
+              <h3 data-location-title>Palm Springs</h3>
+              <p data-location-copy>Anthem Air Conditioning &amp; Plumbing serves Palm Springs with plumbing, cooling, heating, water heater, and emergency service support.</p>
               <div class="location-detail-list">
                 <span><i data-lucide="clock-3"></i><strong data-location-response>Same-day appointments available</strong></span>
                 <span><i data-lucide="wrench"></i><strong data-location-services>Plumbing, heating, cooling, HVAC, water heaters</strong></span>
@@ -376,7 +369,7 @@
             <details><summary>How much will it cost?</summary><p>Anthem uses clear, upfront pricing after diagnosing your system, so you know the price before work begins.</p></details>
             <details><summary>Are you licensed and insured?</summary><p>Yes. Anthem provides licensed and insured plumbing, heating, cooling, HVAC, and water heater service.</p></details>
             <details><summary>Do you offer financing options?</summary><p>Financing options may be available for qualifying repairs and replacements. Ask during your estimate.</p></details>
-            <details><summary>What areas do you serve?</summary><p>Anthem, Phoenix, Erie, Deer Valley, Firestone, Louisville, Superior, and nearby Anthem and the surrounding area communities.</p></details>
+            <details><summary>What areas do you serve?</summary><p>Palm Springs, Palm Desert, Indio, Cathedral City, La Quinta, Coachella, Desert Hot Springs, Rancho Mirage, and nearby California communities.</p></details>
           </div>
         </div>
       </section>
@@ -388,7 +381,7 @@
           <a class="brand footer-brand" href="#top" aria-label="Anthem home">
             <img class="brand-logo footer-logo" src="assets/anthem-logo.svg" alt="Anthem Cooling, Heating & Plumbing" />
           </a>
-          <p>Trusted plumbing, heating, and cooling solutions built on honest service, quality workmanship, and dependable care for Anthem and the surrounding area homeowners.</p>
+          <p>Trusted plumbing, heating, and cooling solutions built on honest service, quality workmanship, and dependable care for California homeowners.</p>
           <div class="footer-socials">
             <a href="https://www.facebook.com/search/top?q=anthem%20plumbing" aria-label="Facebook">
               <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" stroke="none" d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z" /></svg>
@@ -425,7 +418,7 @@
           <h2>Contact</h2>
           <a href="tel:+17608952621"><i data-lucide="phone"></i> (760) 895-2621</a>
           <a href="mailto:info@anthemplumbing.com"><i data-lucide="mail"></i> info@anthemplumbing.com</a>
-          <span><i data-lucide="map-pin"></i> Anthem and the surrounding area, AZ &amp; Surrounding Areas</span>
+          <span><i data-lucide="map-pin"></i> California &amp; Surrounding Areas</span>
           <span><i data-lucide="clock-3"></i> 24/7 Emergency Service</span>
           <a class="button button-red footer-call-button" href="tel:+17608952621"><i data-lucide="phone"></i> Call (760) 895-2621</a>
         </div>
@@ -441,6 +434,6 @@
     </footer>
 
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
-    <script src="script.js?v=locations-dropdown-0711"></script>
+    <script src="script.js?v=location-family-0715"></script>
   </body>
 </html>

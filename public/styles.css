@@ -589,8 +589,12 @@ h1 span, .hero h1 span { color: var(--red); }
 .request-card-top { background: #fff; border-bottom: 1px solid var(--line); color: var(--ink); padding: 26px clamp(21px, 2.85vw, 34px) 24px; }
 .request-card h2 { color: inherit; font-size: 30px; letter-spacing: -0.055em; margin: 0 0 8px; }
 .request-card-top p { color: #5f6873; font-size: 15px; line-height: 1.45; margin: 0; }
-.rating-line { align-items: center; border-bottom: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 22px; padding: 22px clamp(22px, 3vw, 36px); }
+.rating-line { align-items: center; border-bottom: 1px solid var(--line); display: flex; flex-wrap: nowrap; gap: 8px; margin-bottom: 22px; padding: 22px clamp(16px, 2.4vw, 28px); white-space: nowrap; }
 .rating-line .google-logo { height: 24px; width: 24px; }
+.rating-line .stars,
+.rating-line .rating-summary { flex: 0 0 auto; }
+.rating-line .rating-summary { color: #242a31; font-size: 13.5px; }
+.rating-line .rating-summary strong { font-size: 18px; }
 fieldset { border: 0; display: grid; gap: 12px; grid-template-columns: 1fr 1fr; margin: 0; padding: 0 clamp(22px, 3vw, 36px) 16px; }
 legend, label { color: #242a31; font-size: 12px; font-weight: 900; letter-spacing: .03em; text-transform: uppercase; }
 legend { grid-column: 1 / -1; margin-bottom: 2px; }
@@ -926,6 +930,7 @@ input:focus, textarea:focus, select:focus { border-color: var(--red); box-shadow
 .contact-form-card small { align-items: center; color: #5f6873; display: inline-flex; font-size: 11px; gap: 7px; margin-top: 11px; }
 .contact-form-card small svg { color: var(--ink); height: 14px; width: 14px; }
 .contact-form-card .form-message { font-size: 12px; margin: 11px 0 0 !important; }
+.contact-layout .request-card { justify-self: end; max-width: 500px; transform: none; }
 .contact-info-row { display: grid; gap: 15px; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 26px auto 0; max-width: none; }
 .contact-info-row div { align-items: flex-start; background: #fff; border: 1px solid #e6e8eb; border-radius: 12px; box-shadow: 0 8px 20px rgba(6,11,16,.08); display: grid; gap: 5px 15px; grid-template-columns: 46px 1fr; min-height: 104px; padding: 18px; }
 .contact-info-row svg { background: rgba(231,25,34,.08); border-radius: 50%; color: var(--red); grid-row: span 3; height: 46px; padding: 12px; width: 46px; }
@@ -1104,13 +1109,17 @@ input:focus, textarea:focus, select:focus { border-color: var(--red); box-shadow
 .service-page-photo { background: linear-gradient(135deg, #1a2028, #303844); height: 138px; overflow: hidden; position: relative; }
 .service-page-photo::before { background: inherit; background-position: inherit; background-size: cover; content: ""; inset: 0; position: absolute; transform: scale(1.1); }
 .service-page-photo::after { background: linear-gradient(135deg, rgba(231,25,34,.72), rgba(6,11,16,.18)); content: ""; inset: 0; position: absolute; }
-.service-photo-plumbing { background-image: linear-gradient(135deg, rgba(6,11,16,.12), rgba(6,11,16,.02)), url("/assets/service-plumbing-one.png"); background-position: center; background-size: cover; }
+.service-photo-plumbing { background-image: linear-gradient(135deg, rgba(6,11,16,.12), rgba(6,11,16,.02)), url("/assets/pipes.png"); background-position: center; background-size: cover; }
 .service-photo-sewer { background-image: linear-gradient(135deg, rgba(6,11,16,.18), rgba(6,11,16,.04)), url("/assets/service-2-sewer-drain.png"); background-position: center; background-size: cover; }
 .service-photo-drain { background-image: linear-gradient(135deg, rgba(6,11,16,.18), rgba(6,11,16,.04)), url("/assets/sink.png"); background-position: center; background-size: cover; }
 .service-photo-hydro { background-image: linear-gradient(135deg, rgba(6,11,16,.18), rgba(6,11,16,.04)), url("/assets/hydro.png"); background-position: center; background-size: cover; }
 .service-photo-waterline { background-image: linear-gradient(135deg, rgba(6,11,16,.12), rgba(6,11,16,.02)), url("/assets/gas-line-repair.png"); background-position: center; background-size: cover; }
 .service-photo-gas { background-image: linear-gradient(135deg, rgba(6,11,16,.12), rgba(6,11,16,.02)), url("/assets/gas-line-repair.png"); background-position: center; background-size: cover; }
 .service-photo-hvac { background-image: linear-gradient(135deg, rgba(6,11,16,.16), rgba(6,11,16,.04)), url("/assets/service-ac-addon.png"); background-position: center; background-size: cover; }
+.service-photo-ac-installation { background-image: linear-gradient(135deg, rgba(6,11,16,.16), rgba(6,11,16,.04)), url("/assets/ac-installation.png"); background-position: center; background-size: cover; }
+.service-photo-ac-replacement { background-image: linear-gradient(135deg, rgba(6,11,16,.16), rgba(6,11,16,.04)), url("/assets/ac-replacement.png"); background-position: center; background-size: cover; }
+.service-photo-insulation { background-image: linear-gradient(135deg, rgba(6,11,16,.16), rgba(6,11,16,.04)), url("/assets/insulation.png"); background-color: #eef3f7; background-position: center 35%; background-repeat: no-repeat; background-size: contain; }
+.service-photo-air-duct-cleaning { background-image: linear-gradient(135deg, rgba(6,11,16,.16), rgba(6,11,16,.04)), url("/assets/air-duct-cleaning.png"); background-color: #eef3f7; background-position: center 35%; background-repeat: no-repeat; background-size: contain; }
 .service-photo-furnace-repair { background-image: linear-gradient(135deg, rgba(6,11,16,.16), rgba(6,11,16,.04)), url("/assets/furnace-repair.png"); background-position: center; background-size: cover; }
 .service-photo-furnace-replacement { background-image: linear-gradient(135deg, rgba(6,11,16,.16), rgba(6,11,16,.04)), url("/assets/furnace-replacement.png"); background-position: center; background-size: cover; }
 .service-photo-heater-repair { background-image: linear-gradient(135deg, rgba(6,11,16,.16), rgba(6,11,16,.04)), url("/assets/heater-repair.png"); background-position: center; background-size: cover; }
@@ -1471,7 +1480,12 @@ input:focus, textarea:focus, select:focus { border-color: var(--red); box-shadow
   .footer-bottom { align-items: flex-start; flex-direction: column; gap: 16px; }
   .request-card { border-radius: 12px; }
   .request-card .button { margin-left: 22px; margin-right: 22px; width: calc(100% - 44px); }
-  .rating-line { align-items: flex-start; }
+  .rating-line { align-items: center; gap: 5px; padding-left: 12px; padding-right: 12px; }
+  .rating-line .google-logo { height: 20px; width: 20px; }
+  .rating-line .stars { gap: 1px; }
+  .rating-line .stars svg { height: 13px; width: 13px; }
+  .rating-line .rating-summary { font-size: 11.5px; }
+  .rating-line .rating-summary strong { font-size: 15px; }
   .reviews-score { flex-wrap: wrap; }
   .services-cta .button, .google-review-button { width: 100%; }
   .contact-highlights { grid-template-columns: 1fr; }
@@ -1678,7 +1692,7 @@ body.services-page .service-location-section {
   align-items: center;
   background:
     linear-gradient(90deg, rgba(5,8,12,.92) 0%, rgba(5,8,12,.8) 42%, rgba(5,8,12,.52) 72%, rgba(5,8,12,.34) 100%),
-    url("assets/van.png?v=locations-van-up-0711") center 82% / cover no-repeat,
+    url("assets/van.png?v=locations-van-upward-more-0715") center 52% / cover no-repeat,
     linear-gradient(135deg, #151b22 0%, #080d13 58%, #121922 100%);
   color: #fff;
   display: grid;
@@ -4891,5 +4905,325 @@ button.nav-trigger::after {
 
   .nav-menu[aria-label="Services menu"] a {
     color: var(--ink);
+  }
+}
+
+/* Mobile hardening pass: keep shared layouts within the viewport. */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img,
+svg,
+iframe,
+video {
+  max-width: 100%;
+}
+
+@media (max-width: 1120px) {
+  .site-header {
+    align-items: center;
+    gap: 0 10px;
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .brand,
+  .brand-logo {
+    min-width: 0;
+  }
+
+  .header-actions {
+    justify-self: end;
+  }
+
+  .phone-link {
+    white-space: nowrap;
+  }
+
+  .site-header.is-open .main-nav {
+    align-items: stretch;
+    border-top: 1px solid rgba(255,255,255,.18);
+    display: grid;
+    gap: 8px;
+    max-height: calc(100vh - 76px);
+    overflow-y: auto;
+    padding-bottom: 20px;
+    width: 100%;
+  }
+
+  .main-nav > a,
+  .nav-trigger {
+    align-items: center;
+    background: rgba(255,255,255,.08);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    min-height: 46px;
+    padding: 0 14px;
+    text-align: left;
+    width: 100%;
+  }
+
+  button.nav-trigger::after {
+    color: currentColor;
+    content: "+" !important;
+    font-size: 18px;
+    font-weight: 900;
+  }
+
+  .nav-dropdown.is-open > .nav-trigger::after {
+    content: "-" !important;
+  }
+
+  a.nav-trigger::after {
+    content: none !important;
+  }
+
+  .nav-dropdown > .nav-menu,
+  .nav-dropdown > .nav-menu[aria-label="Locations menu"] {
+    background: #fff;
+    border: 1px solid rgba(34,58,114,.16);
+    border-radius: 10px;
+    box-shadow: none;
+    display: none !important;
+    left: auto;
+    margin-top: 8px;
+    min-width: 0;
+    opacity: 1 !important;
+    padding: 8px;
+    pointer-events: auto !important;
+    position: static;
+    transform: none !important;
+    visibility: visible;
+    width: 100%;
+  }
+
+  .nav-dropdown.is-open > .nav-menu,
+  .nav-dropdown.is-open > .nav-menu[aria-label="Locations menu"] {
+    display: grid !important;
+  }
+
+  .nav-menu a,
+  .nav-menu[aria-label="Locations menu"] a {
+    color: var(--ink);
+    min-height: 42px;
+    padding: 0 12px;
+  }
+
+  .hero-inner,
+  .locations-hero-reference,
+  .services-page-hero,
+  body.services-page .service-hero-reference .hero-inner,
+  body.services-page .services-page-hero,
+  .about-story-shell,
+  .about-standard-shell,
+  .about-final-cta,
+  .final-cta,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .locations-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .site-header {
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    grid-template-rows: 70px auto;
+    min-height: 70px;
+    padding: 0 12px;
+  }
+
+  .brand {
+    width: min(204px, 50vw);
+  }
+
+  .brand-logo {
+    max-height: 46px;
+  }
+
+  .phone-link {
+    border-radius: 999px;
+    min-height: 40px;
+    padding: 0 12px;
+  }
+
+  .phone-link span {
+    display: none;
+  }
+
+  .phone-link svg {
+    display: block;
+    height: 18px;
+    width: 18px;
+  }
+
+  .menu-button {
+    min-height: 42px;
+    min-width: 42px;
+  }
+
+  .hero,
+  .about-hero,
+  .services-page-hero,
+  .locations-hero-reference,
+  body.services-page .service-hero-reference,
+  body.services-page .services-page-hero {
+    min-height: 0;
+    padding-top: 42px;
+  }
+
+  .hero-inner,
+  body.services-page .service-hero-reference .hero-inner {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .hero-buttons,
+  .about-hero-actions,
+  .help-actions,
+  .boulder-hero-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .button,
+  .hero-buttons .button,
+  .about-hero-actions .button,
+  .help-actions .button,
+  .help-actions .button-outline {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .trust-pills,
+  .hero-service-highlights,
+  .service-grid,
+  .service-page-grid,
+  .value-grid,
+  .review-cards,
+  .contact-info-row,
+  .contact-form-grid,
+  .form-grid,
+  fieldset,
+  .locations-area-buttons,
+  .location-hero-chips,
+  .location-hero-trust,
+  .location-hero-popup-stats,
+  .about-values-grid,
+  .about-stats,
+  .service-proof-grid,
+  .process-grid,
+  body.services-page .service-quality-features,
+  body.services-page .service-picker-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .request-card,
+  .contact-form-card,
+  .service-picker-card,
+  .locations-shell,
+  .location-details,
+  .legal-card,
+  .about-final-cta,
+  .service-final-cta,
+  .final-cta {
+    border-radius: 14px;
+  }
+
+  .locations-shell,
+  .locations-grid,
+  .locations-area-buttons {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .location-map,
+  .location-map iframe,
+  .location-hero-map,
+  .location-hero-map-embed iframe {
+    min-height: 280px !important;
+  }
+
+  .location-hero-selected {
+    grid-template-columns: 34px 1fr;
+    width: 100%;
+  }
+
+  .location-hero-popup-title {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .boulder-homeowners-section,
+  .boulder-challenges-section,
+  .boulder-service-showcase,
+  .boulder-overview,
+  .boulder-cta,
+  body.services-page .service-quality-shell,
+  body.services-page .service-help-grid,
+  body.services-page .service-why-shell {
+    grid-template-columns: 1fr !important;
+  }
+
+  .boulder-homeowners-photo,
+  .boulder-challenges-photo,
+  .boulder-feature-visual,
+  .service-why-image,
+  body.services-page .service-quality-photo {
+    min-height: 260px;
+    height: auto;
+  }
+
+  .footer-grid,
+  .footer-bottom {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 450px) {
+  .site-header {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .brand {
+    width: min(186px, 48vw);
+  }
+
+  .hero h1,
+  .services-page-hero h1,
+  .locations-hero-reference > .hero-content h1,
+  .locations-hero-reference > .hero-content h2,
+  body.services-page .service-hero-reference h1,
+  body.services-page .services-page-hero h1 {
+    font-size: clamp(34px, 12vw, 48px);
+    letter-spacing: -.055em;
+  }
+
+  .section,
+  .legal-content,
+  body.services-page .services-page-list,
+  body.services-page .service-section-reference,
+  body.services-page .service-quality-section,
+  body.services-page .service-why-band,
+  body.services-page .service-process {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .request-card .button,
+  .contact-form-card .button {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
   }
 }

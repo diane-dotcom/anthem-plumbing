@@ -9,48 +9,15 @@ createAnthemIcons();
 const header = document.querySelector('.site-header');
 const menuButton = document.querySelector('.menu-button');
 
-const serviceMenuGroups = [
-  {
-    title: 'Plumbing',
-    href: 'plumbing.html',
-    links: [
-      ['AC', 'services.html?service=ac'],
-      ['Drain Cleaning', 'services.html?service=drain-cleaning'],
-      ['Emergency Plumbing', 'services.html?service=emergency-plumbing'],
-      ['Sewer Repair', 'services.html?service=sewer-repair'],
-      ['Waterline Repair', 'services.html?service=waterline-repair'],
-      ['Water Heater Repair', 'services.html?service=water-heater-repair'],
-      ['Gas Line Repair', 'services.html?service=gas-line-repair'],
-      ['Water Softener Installation', 'services.html?service=water-softener-installation'],
-      ['Hydro Jetting', 'services.html?service=hydro-jetting'],
-    ],
-  },
-  {
-    title: 'Cooling',
-    href: 'cooling.html',
-    links: [
-      ['AC Repair', 'services.html?service=ac-repair'],
-      ['AC Replacement', 'services.html?service=ac-replacement'],
-      ['AC Installation', 'services.html?service=ac-installation'],
-      ['Insulation', 'services.html?service=insulation'],
-      ['Air Duct Cleaning', 'services.html?service=air-duct-cleaning'],
-    ],
-  },
-  {
-    title: 'Heating',
-    href: 'heating.html',
-    links: [
-      ['Furnace Repair', 'services.html?service=furnace-repair'],
-      ['Furnace Replacement', 'services.html?service=furnace-replacement'],
-      ['Heater Repair', 'services.html?service=heater-repair'],
-      ['Heat Pump Repair', 'services.html?service=heat-pump-repair'],
-    ],
-  },
-];
-
 const locationMenuItems = [
-  ['Coachella Valley', 'anthem-main', 'anthem-ac-plumbing.html'],
-  ['Palm Desert', 'anthem-palm-desert', 'anthem-palm-desert.html'],
+  ['Palm Springs', 'palm-springs', 'longmont.html'],
+  ['Palm Desert', 'palm-desert', 'anthem-palm-desert.html'],
+  ['Indio', 'indio', 'thornton.html'],
+  ['Cathedral City', 'cathedral-city', 'broomfield.html'],
+  ['La Quinta', 'la-quinta', 'lafayette.html'],
+  ['Coachella', 'coachella', 'arvada.html'],
+  ['Desert Hot Springs', 'desert-hot-springs', 'lakewood.html'],
+  ['Rancho Mirage', 'rancho-mirage', 'commerce-city.html'],
 ];
 
 const normalizeAnthemChrome = () => {
@@ -58,12 +25,38 @@ const normalizeAnthemChrome = () => {
     logo.src = 'assets/anthem-logo.png';
   });
 
-  document.querySelectorAll('.nav-menu[aria-label="Services menu"]').forEach((menu) => {
-    menu.classList.remove('service-mega-menu');
-    menu.innerHTML = `
-      <a href="plumbing.html">Plumbing</a>
-      <a href="ac.html">AC</a>
-      <a href="heater.html">Heater</a>
+  document.querySelectorAll('.main-nav').forEach((nav) => {
+    nav.innerHTML = `
+      <a href="/">Home</a>
+      <div class="nav-dropdown">
+        <button class="nav-trigger" type="button">Plumbing</button>
+        <div class="nav-menu" aria-label="Plumbing menu">
+          <a href="plumbing.html">Plumbing</a>
+          <a href="services.html?service=drain-cleaning">Drain Cleaning</a>
+          <a href="sewer-line-repair-and-replacement.html">Sewer Line Repair and Replacement</a>
+          <a href="water-heater-repair-and-replacement.html">Water Heater Repair and Replacement</a>
+          <a href="hydro-jetting.html">Hydro Jetting</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <button class="nav-trigger" type="button">HVAC</button>
+        <div class="nav-menu" aria-label="HVAC menu">
+          <a href="services.html?service=ac-repair">AC Repair</a>
+          <a href="services.html?service=ac-replacement">AC Replacement</a>
+          <a href="services.html?service=ac-installation">AC Installation</a>
+          <a href="services.html?service=furnace-repair">Furnace Repair</a>
+          <a href="services.html?service=furnace-replacement">Furnace Replacement</a>
+          <a href="services.html?service=insulation">Insulation</a>
+          <a href="services.html?service=air-duct-cleaning">Air Duct Cleaning</a>
+        </div>
+      </div>
+      <a href="about.html">About us</a>
+      <div class="nav-dropdown">
+        <a class="nav-trigger" href="locations.html">Locations</a>
+        <div class="nav-menu" aria-label="Locations menu">
+          ${locationMenuItems.map(([label, , href]) => `<a href="${href}">${label}</a>`).join('')}
+        </div>
+      </div>
     `;
   });
 
@@ -121,21 +114,6 @@ menuButton?.addEventListener('click', () => {
   menuButton.setAttribute('aria-expanded', String(isOpen));
 });
 
-document.querySelectorAll('.main-nav a, .header-actions a').forEach((link) => {
-  link.addEventListener('click', () => {
-    if (link.classList.contains('nav-trigger') && link.closest('.nav-dropdown')) return;
-    header.classList.remove('is-open');
-    menuButton?.setAttribute('aria-expanded', 'false');
-  });
-});
-
-document.querySelectorAll('.main-nav a').forEach((link) => {
-  link.addEventListener('click', () => {
-    document.querySelectorAll('.main-nav a').forEach((item) => item.classList.remove('is-active'));
-    link.classList.add('is-active');
-  });
-});
-
 const setDropdownOpen = (dropdown, isOpen) => {
   const menu = dropdown?.querySelector('.nav-menu');
   if (!dropdown || !menu) return;
@@ -153,27 +131,36 @@ const closeDropdowns = () => {
   document.querySelectorAll('.nav-dropdown.is-open').forEach((item) => setDropdownOpen(item, false));
 };
 
-document.querySelectorAll('.nav-trigger').forEach((trigger) => {
-  trigger.addEventListener('click', (event) => {
-    const dropdown = trigger.closest('.nav-dropdown');
-    if (!dropdown) return;
-    if (!dropdown.querySelector('.nav-menu')) return;
+document.addEventListener('click', (event) => {
+  const trigger = event.target.closest('.nav-trigger');
+  const dropdown = trigger?.closest('.nav-dropdown');
 
+  if (trigger && dropdown?.querySelector('.nav-menu') && trigger.tagName !== 'A') {
     event.preventDefault();
-
     const isOpen = dropdown.classList.contains('is-open');
     closeDropdowns();
     setDropdownOpen(dropdown, !isOpen);
-  });
-});
+    return;
+  }
 
-document.addEventListener('click', (event) => {
+  const link = event.target.closest('.main-nav a, .header-actions a');
+  if (link) {
+    header.classList.remove('is-open');
+    menuButton?.setAttribute('aria-expanded', 'false');
+
+    if (link.closest('.main-nav')) {
+      document.querySelectorAll('.main-nav a').forEach((item) => item.classList.remove('is-active'));
+      link.classList.add('is-active');
+    }
+  }
+
   if (event.target.closest('.nav-dropdown')) return;
   closeDropdowns();
 });
 
 const makeLocationDetail = (title) => ({
   title,
+  shortLabel: `${title}, CA`,
   copy: `Anthem Air Conditioning & Plumbing serves ${title} with plumbing, cooling, heating, water heater, and emergency service support.`,
   response: 'Same-day appointments may be available',
   services: 'Plumbing, cooling, heating, water heaters, emergency service',
@@ -182,18 +169,7 @@ const makeLocationDetail = (title) => ({
 });
 
 const locationDetails = Object.fromEntries(locationMenuItems.map(([title, slug]) => [slug, makeLocationDetail(title)]));
-locationDetails['anthem-main'] = {
-  title: 'Coachella Valley',
-  shortLabel: 'Coachella Valley, CA',
-  heroTitle: 'Coachella Valley',
-  heroCopy: 'Anthem Air Conditioning & Plumbing provides trusted plumbing, cooling, heating, and water heater service from this Coachella Valley location.',
-  copy: 'Anthem Air Conditioning & Plumbing provides plumbing, heating, cooling, water heater, and emergency service support from this Coachella Valley location.',
-  response: 'Same-day appointments available',
-  services: 'Plumbing, heating, cooling, HVAC, water heaters',
-  map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3320.987941352639!2d-116.14851082392171!3d33.657474338471516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80da588fac1fb185%3A0x6a1b0c0c6f0c386d!2sAnthem%20Air%20Conditioning%20%26%20Plumbing!5e0!3m2!1sen!2sph!4v1783697114450!5m2!1sen!2sph',
-  link: 'https://www.google.com/maps/search/?api=1&query=Anthem%20Air%20Conditioning%20%26%20Plumbing',
-};
-locationDetails['anthem-palm-desert'] = {
+locationDetails['palm-desert'] = {
   title: 'Palm Desert',
   shortLabel: 'Palm Desert, CA',
   heroTitle: 'Palm Desert',
@@ -205,11 +181,16 @@ locationDetails['anthem-palm-desert'] = {
   link: 'https://www.google.com/maps/search/?api=1&query=Anthem%20Air%20Conditioning%20%26%20Plumbing%20Palm%20Desert',
 };
 
+const pageLocationDefaults = {
+  'anthem-palm-desert.html': 'palm-desert',
+};
+
 const getCurrentLocationSlug = () => {
   const requested = new URLSearchParams(window.location.search).get('location');
-  const pageDefault = document.body.dataset.locationDefault;
+  const currentPage = window.location.pathname.split('/').pop() || '';
+  const pageDefault = document.body.dataset.locationDefault || pageLocationDefaults[currentPage];
   if (locationDetails[requested]) return requested;
-  return locationDetails[pageDefault] ? pageDefault : 'anthem-main';
+  return locationDetails[pageDefault] ? pageDefault : 'palm-springs';
 };
 
 const setLocationDisplay = (slug) => {
