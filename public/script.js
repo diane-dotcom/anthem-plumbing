@@ -20,6 +20,29 @@ const locationMenuItems = [
   ['Rancho Mirage', 'rancho-mirage', 'commerce-city.html'],
 ];
 
+const mapPackLocations = [
+  {
+    title: 'Anthem Air Conditioning & Plumbing Palm Desert',
+    slug: 'palm-desert-office',
+    shortLabel: 'Palm Desert, CA',
+    copy: 'Anthem Air Conditioning & Plumbing Palm Desert serves local homeowners with plumbing, heating, cooling, water heater, and emergency service support.',
+    response: 'Same-day appointments may be available',
+    services: 'Plumbing, heating, cooling, HVAC, water heaters',
+    map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106192.11715733845!2d-116.52661168359377!3d33.72178999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80daff53f41139d5%3A0x15faa6d51cc79841!2sAnthem%20Air%20Conditioning%20%26%20Plumbing%20Palm%20Desert!5e0!3m2!1sen!2sph!4v1784064067357!5m2!1sen!2sph',
+    link: 'https://www.google.com/maps/search/?api=1&query=Anthem%20Air%20Conditioning%20%26%20Plumbing%20Palm%20Desert',
+  },
+  {
+    title: 'Anthem Air Conditioning & Plumbing',
+    slug: 'anthem-main-office',
+    shortLabel: 'Coachella Valley, CA',
+    copy: 'Anthem Air Conditioning & Plumbing serves Coachella Valley homeowners with plumbing, heating, cooling, water heater, and emergency service support.',
+    response: 'Same-day appointments may be available',
+    services: 'Plumbing, heating, cooling, HVAC, water heaters',
+    map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3320.9879413526473!2d-116.14851082366374!3d33.6574743384711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80da588fac1fb185%3A0x6a1b0c0c6f0c386d!2sAnthem%20Air%20Conditioning%20%26%20Plumbing!5e0!3m2!1sen!2sph!4v1784064104596!5m2!1sen!2sph',
+    link: 'https://www.google.com/maps/search/?api=1&query=Anthem%20Air%20Conditioning%20%26%20Plumbing',
+  },
+];
+
 const normalizeAnthemChrome = () => {
   document.querySelectorAll('.brand-logo').forEach((logo) => {
     logo.src = 'assets/anthem-logo.png';
@@ -170,6 +193,9 @@ const makeLocationDetail = (title) => ({
 });
 
 const locationDetails = Object.fromEntries(locationMenuItems.map(([title, slug]) => [slug, makeLocationDetail(title)]));
+mapPackLocations.forEach((location) => {
+  locationDetails[location.slug] = location;
+});
 locationDetails['palm-desert'] = {
   title: 'Palm Desert',
   shortLabel: 'Palm Desert, CA',
@@ -231,10 +257,10 @@ const setLocationDisplay = (slug) => {
 };
 
 const normalizeLocationInterfaces = (root = document) => {
-  const locationButtons = locationMenuItems.map(([title, slug]) => `
+  const locationButtons = mapPackLocations.map(({ title, slug, shortLabel }) => `
     <button class="location-button" type="button" data-location-button data-location="${slug}">
       <i data-lucide="map-pin"></i>
-      <span><strong>${title}</strong><small>${locationDetails[slug]?.shortLabel || 'California'}</small></span>
+      <span><strong>${title}</strong><small>${shortLabel}</small></span>
     </button>
   `).join('');
 
@@ -242,13 +268,22 @@ const normalizeLocationInterfaces = (root = document) => {
     <button type="button" data-location="${slug}">${title}</button>
   `).join('');
 
+  const hasMapPack = Boolean(root.querySelector('.location-list'));
+
+  root.querySelectorAll('.locations-section .locations-heading').forEach((heading) => {
+    const title = heading.querySelector('h2');
+    const copy = heading.querySelector('p:not(.section-kicker)');
+    if (title) title.textContent = 'Anthem Plumbing, Heating and Cooling Locations Near You';
+    if (copy) copy.textContent = 'Choose one of our two Anthem Air Conditioning & Plumbing locations serving local homeowners.';
+  });
+
   root.querySelectorAll('.location-list').forEach((list) => {
     list.innerHTML = locationButtons;
   });
   root.querySelectorAll('.location-hero-chips').forEach((chips) => {
     chips.innerHTML = locationChips;
   });
-  setLocationDisplay(getCurrentLocationSlug());
+  setLocationDisplay(hasMapPack ? mapPackLocations[0].slug : getCurrentLocationSlug());
   createAnthemIcons();
 };
 

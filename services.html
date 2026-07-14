@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=mobile-nav-locations-panel-0715" />
+    <link rel="stylesheet" href="styles.css?v=mobile-map-pack-0715" />
   </head>
   <body class="services-page">
     <header class="site-header" id="top">
@@ -130,6 +130,7 @@
       ];
 
       const plumbingOverviewCard = {
+        slug: 'plumbing',
         id: 'plumbing-service',
         photo: 'service-photo-plumbing',
         icon: 'wrench',
@@ -332,7 +333,7 @@
         page.heroImage = servicePages.plumbing.heroImage;
         page.sectionTitle = 'Explore More Anthem Services';
         page.sectionCopy = 'Plumbing services from Anthem Air Conditioning & Plumbing.';
-        page.cards = [plumbingOverviewCard, ...plumbingServiceCards.filter((item) => item.slug !== card.slug)];
+        page.cards = plumbingServiceCards;
         servicePages[card.slug] = page;
       });
       coolingServiceCards.forEach((card) => {
@@ -479,7 +480,7 @@
                   <div class="locations-heading">
                     <p class="section-kicker">Locations Near You</p>
                     <h2>Anthem Plumbing, Heating and Cooling Locations Near You</h2>
-                    <p>Serving local homeowners from eight Anthem Air Conditioning &amp; Plumbing locations.</p>
+                    <p>Choose one of our two Anthem Air Conditioning &amp; Plumbing locations serving local homeowners.</p>
                   </div>
 
                   <div class="locations-grid">
@@ -553,6 +554,6 @@
         });
     </script>
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
-    <script src="script.js?v=mobile-nav-locations-panel-0715"></script>
+    <script src="script.js?v=mobile-map-pack-0715"></script>
   </body>
 </html>
