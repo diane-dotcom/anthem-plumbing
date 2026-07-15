@@ -12,6 +12,9 @@
   --soft: #f6f7f9;
   --gold: #ffb400;
   --shadow: 0 28px 80px rgba(8, 14, 22, 0.18);
+  --review-banner-height: 64px;
+  --review-banner-gap: 12px;
+  --sticky-review-top: 90px;
 }
 
 .about-hero {
@@ -301,6 +304,7 @@ body {
   background: var(--paper);
   color: var(--ink);
   overflow-x: hidden;
+  padding-top: calc(var(--sticky-review-top) + var(--review-banner-gap) + var(--review-banner-height));
 }
 a { color: inherit; text-decoration: none; }
 img { max-width: 100%; }
@@ -317,8 +321,11 @@ svg { display: inline-block; height: 1em; width: 1em; fill: none; stroke: curren
   grid-template-columns: auto 1fr auto;
   min-height: 90px;
   padding: 14px clamp(18px, 3.6vw, 52px);
-  position: sticky;
+  left: 0;
+  position: fixed;
+  right: 0;
   top: 0;
+  width: 100%;
   z-index: 50;
 }
 .brand {
@@ -407,7 +414,7 @@ svg { display: inline-block; height: 1em; width: 1em; fill: none; stroke: curren
   flex-wrap: nowrap;
   gap: 28px;
   justify-content: center;
-  min-height: 64px;
+  min-height: var(--review-banner-height);
   padding: 12px 18px;
   position: relative;
   z-index: 4;
@@ -417,12 +424,13 @@ svg { display: inline-block; height: 1em; width: 1em; fill: none; stroke: curren
   box-shadow: inset 0 1px 0 rgba(255,255,255,.08), 0 10px 22px rgba(3,12,28,.2);
   letter-spacing: .01em;
 }
+.google-review-banner,
 .hero > .google-review-banner {
   left: 0;
-  position: absolute;
+  position: fixed;
   right: 0;
-  top: 0;
-  z-index: 4;
+  top: calc(var(--sticky-review-top) + var(--review-banner-gap));
+  z-index: 49;
 }
 .hero-review-strip {
   gap: 24px;
@@ -1418,6 +1426,7 @@ input:focus, textarea:focus, select:focus { border-color: var(--red); box-shadow
 }
 
 @media (max-width: 760px) {
+  :root { --sticky-review-top: 72px; }
   .brand-icons { display: none; }
   .site-header { min-height: 72px; padding: 12px 18px; }
   .brand-logo { max-height: 48px; padding: 3px 6px; }

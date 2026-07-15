@@ -75,7 +75,7 @@ const normalizeAnthemChrome = () => {
       </div>
       <a href="about.html">About us</a>
       <div class="nav-dropdown">
-        <button class="nav-trigger" type="button">Locations</button>
+        <a class="nav-trigger" href="locations.html">Locations</a>
         <div class="nav-menu" aria-label="Locations menu">
           ${locationMenuItems.map(([label, , href]) => `<a href="${href}">${label}</a>`).join('')}
         </div>
@@ -102,18 +102,15 @@ const normalizeAnthemChrome = () => {
 normalizeAnthemChrome();
 
 const ensureGoogleReviewBanner = () => {
-  const homeHero = document.querySelector('.hero#home');
   const main = document.querySelector('main');
-  if (!homeHero || !main) return;
+  if (!main) return;
 
-  const bannerStyles = 'display:flex;align-items:center;justify-content:center;gap:28px;min-height:64px;padding:12px 18px;background:#061b3a;color:#fff;font-weight:900;position:absolute;top:0;left:0;right:0;z-index:4;';
-  const existingBanner = document.querySelector('.google-review-banner') || document.querySelector('main > .hero-review-strip') || homeHero.querySelector('.hero-review-strip');
+  const bannerStyles = 'display:flex;align-items:center;justify-content:center;gap:28px;min-height:64px;padding:12px 18px;background:#061b3a;color:#fff;font-weight:900;position:fixed;top:calc(var(--sticky-review-top, 90px) + var(--review-banner-gap, 12px));left:0;right:0;z-index:49;';
+  const existingBanner = document.querySelector('.google-review-banner') || document.querySelector('.hero-review-strip');
   if (existingBanner) {
     existingBanner.classList.add('google-review-banner');
     existingBanner.style.cssText = bannerStyles;
-    if (existingBanner.parentElement !== homeHero) {
-      homeHero.insertBefore(existingBanner, homeHero.firstElementChild);
-    }
+    main.insertBefore(existingBanner, main.firstElementChild);
     document.querySelectorAll('.hero-review-strip').forEach((banner) => {
       if (banner !== existingBanner) banner.remove();
     });
@@ -130,7 +127,7 @@ const ensureGoogleReviewBanner = () => {
     <span class="stars" aria-label="5 stars"><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></span>
     <span>Based on 1,000+ Google reviews</span>
   `;
-  homeHero.insertBefore(banner, homeHero.firstElementChild);
+  main.insertBefore(banner, main.firstElementChild);
   createAnthemIcons();
 };
 
@@ -361,5 +358,6 @@ const bindAnthemContent = (root = document) => {
 bindAnthemContent();
 document.addEventListener('anthem:content-loaded', () => {
   normalizeAnthemChrome();
+  ensureGoogleReviewBanner();
   bindAnthemContent();
 });
