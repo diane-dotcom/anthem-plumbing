@@ -5556,6 +5556,7 @@ video {
 
 @media (max-width: 760px) {
   :root {
+    --review-banner-height: 44px;
     --review-banner-gap: 0px;
     --sticky-review-top: 70px;
   }
