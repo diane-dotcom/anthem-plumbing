@@ -677,6 +677,39 @@
       .hero-review-strip { justify-content: center; max-width: 100%; width: 100%; }
     }
 
+    @media (max-width: 760px) {
+      :root {
+        --review-banner-gap: 0px;
+        --sticky-review-top: 70px;
+      }
+
+      body {
+        padding-top: calc(var(--sticky-review-top) + var(--review-banner-height));
+      }
+
+      .site-header {
+        left: 0 !important;
+        position: fixed !important;
+        right: 0 !important;
+        top: 0 !important;
+        width: 100% !important;
+        z-index: 50 !important;
+      }
+
+      .google-review-banner,
+      main > .hero-review-strip,
+      .hero > .hero-review-strip,
+      .hero > .google-review-banner {
+        left: 0 !important;
+        margin: 0 !important;
+        position: fixed !important;
+        right: 0 !important;
+        top: var(--sticky-review-top) !important;
+        width: 100% !important;
+        z-index: 49 !important;
+      }
+    }
+
   </style>
 </head>
 <body>
