@@ -107,12 +107,16 @@ const ensureGoogleReviewBanner = () => {
   if (!homeHero || !main) return;
 
   const bannerStyles = 'display:flex;align-items:center;justify-content:center;gap:28px;min-height:64px;padding:12px 18px;background:#061b3a;color:#fff;font-weight:900;position:absolute;top:0;left:0;right:0;z-index:4;';
-  const existingBanner = document.querySelector('.google-review-banner');
+  const existingBanner = document.querySelector('.google-review-banner') || document.querySelector('main > .hero-review-strip') || homeHero.querySelector('.hero-review-strip');
   if (existingBanner) {
+    existingBanner.classList.add('google-review-banner');
     existingBanner.style.cssText = bannerStyles;
     if (existingBanner.parentElement !== homeHero) {
       homeHero.insertBefore(existingBanner, homeHero.firstElementChild);
     }
+    document.querySelectorAll('.hero-review-strip').forEach((banner) => {
+      if (banner !== existingBanner) banner.remove();
+    });
     return;
   }
 
