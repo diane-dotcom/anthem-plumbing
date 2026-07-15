@@ -710,6 +710,56 @@
       }
     }
 
+    @media (max-width: 760px) {
+      .google-review-banner,
+      main > .hero-review-strip,
+      .hero > .hero-review-strip,
+      .hero > .google-review-banner {
+        align-items: center !important;
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        gap: 6px !important;
+        justify-content: center !important;
+        min-height: 44px !important;
+        overflow: hidden;
+        padding: 8px !important;
+        text-align: center;
+      }
+
+      .hero-review-strip .google-logo,
+      .google-review-banner .google-logo {
+        height: 16px !important;
+        width: 16px !important;
+      }
+
+      .hero-review-strip .review-score,
+      .google-review-banner .review-score {
+        font-size: 14px !important;
+      }
+
+      .hero-review-strip .stars,
+      .google-review-banner .stars {
+        gap: 1px !important;
+      }
+
+      .hero-review-strip .stars svg,
+      .google-review-banner .stars svg {
+        height: 11px !important;
+        width: 11px !important;
+      }
+
+      .hero-review-strip > span:last-child,
+      .google-review-banner > span:last-child {
+        flex: 0 1 auto !important;
+        font-size: 10px !important;
+        line-height: 1 !important;
+        min-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap !important;
+      }
+    }
+
   </style>
 </head>
 <body>
