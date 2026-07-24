@@ -10,14 +10,14 @@ const header = document.querySelector('.site-header');
 const menuButton = document.querySelector('.menu-button');
 
 const locationMenuItems = [
-  ['Palm Springs', 'palm-springs', 'longmont.html'],
-  ['Palm Desert', 'palm-desert', 'anthem-palm-desert.html'],
-  ['Indio', 'indio', 'thornton.html'],
-  ['Cathedral City', 'cathedral-city', 'broomfield.html'],
-  ['La Quinta', 'la-quinta', 'lafayette.html'],
-  ['Coachella', 'coachella', 'arvada.html'],
-  ['Desert Hot Springs', 'desert-hot-springs', 'lakewood.html'],
-  ['Rancho Mirage', 'rancho-mirage', 'commerce-city.html'],
+  ['Palm Springs', 'palm-springs', '/longmont.html'],
+  ['Palm Desert', 'palm-desert', '/anthem-palm-desert.html'],
+  ['Indio', 'indio', '/thornton.html'],
+  ['Cathedral City', 'cathedral-city', '/broomfield.html'],
+  ['La Quinta', 'la-quinta', '/lafayette.html'],
+  ['Coachella', 'coachella', '/arvada.html'],
+  ['Desert Hot Springs', 'desert-hot-springs', '/lakewood.html'],
+  ['Rancho Mirage', 'rancho-mirage', '/commerce-city.html'],
 ];
 
 const mapPackLocations = [
@@ -45,37 +45,36 @@ const mapPackLocations = [
 
 const normalizeAnthemChrome = () => {
   document.querySelectorAll('.brand-logo').forEach((logo) => {
-    logo.src = 'assets/anthem-logo.png';
+    logo.src = '/assets/anthem-logo.png';
   });
 
   document.querySelectorAll('.main-nav').forEach((nav) => {
     nav.innerHTML = `
       <a href="/">Home</a>
       <div class="nav-dropdown">
-        <button class="nav-trigger" type="button">Plumbing</button>
-        <div class="nav-menu" aria-label="Plumbing menu">
-          <a href="plumbing.html">Plumbing</a>
-          <a href="services.html?service=drain-cleaning">Drain Cleaning</a>
-          <a href="sewer-line-repair-and-replacement.html">Sewer Line Repair and Replacement</a>
-          <a href="water-heater-repair-and-replacement.html">Water Heater Repair and Replacement</a>
-          <a href="hydro-jetting.html">Hydro Jetting</a>
+        <a class="nav-trigger" href="/plumbing.html" data-direct-nav>Plumbing</a>
+          <div class="nav-menu" aria-label="Plumbing menu">
+          <a href="/services/drain-cleaning">Drain Cleaning</a>
+          <a href="/sewer-line-repair-and-replacement.html">Sewer Line Repair and Replacement</a>
+          <a href="/water-heater-repair-and-replacement.html">Water Heater Repair and Replacement</a>
+          <a href="/hydro-jetting.html">Hydro Jetting</a>
         </div>
       </div>
       <div class="nav-dropdown">
-        <button class="nav-trigger" type="button">HVAC</button>
+        <a class="nav-trigger" href="/hvac.html" data-direct-nav>HVAC</a>
         <div class="nav-menu" aria-label="HVAC menu">
-          <a href="services.html?service=ac-repair">AC Repair</a>
-          <a href="services.html?service=ac-replacement">AC Replacement</a>
-          <a href="services.html?service=ac-installation">AC Installation</a>
-          <a href="services.html?service=furnace-repair">Furnace Repair</a>
-          <a href="services.html?service=furnace-replacement">Furnace Replacement</a>
-          <a href="services.html?service=insulation">Insulation</a>
-          <a href="services.html?service=air-duct-cleaning">Air Duct Cleaning</a>
+          <a href="/services/ac-repair">AC Repair</a>
+          <a href="/services/ac-replacement">AC Replacement</a>
+          <a href="/services/ac-installation">AC Installation</a>
+          <a href="/services/furnace-repair">Furnace Repair</a>
+          <a href="/services/furnace-replacement">Furnace Replacement</a>
+          <a href="/services/insulation">Insulation</a>
+          <a href="/services/air-duct-cleaning">Air Duct Cleaning</a>
         </div>
       </div>
-      <a href="about.html">About us</a>
+      <a href="/about.html">About us</a>
       <div class="nav-dropdown">
-        <a class="nav-trigger" href="locations.html">Locations</a>
+        <a class="nav-trigger" href="/locations.html">Locations</a>
         <div class="nav-menu" aria-label="Locations menu">
           ${locationMenuItems.map(([label, , href]) => `<a href="${href}">${label}</a>`).join('')}
         </div>
@@ -122,7 +121,7 @@ const ensureGoogleReviewBanner = () => {
   banner.setAttribute('aria-label', 'Google review summary');
   banner.style.cssText = bannerStyles;
   banner.innerHTML = `
-    <span class="google-dot" aria-hidden="true"><img class="google-logo" src="assets/google-g-logo.svg" alt="" /></span>
+    <span class="google-dot" aria-hidden="true"><img class="google-logo" src="/assets/google-g-logo.svg" alt="" /></span>
     <strong class="review-score">4.9</strong>
     <span class="stars" aria-label="5 stars"><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></span>
     <span>Based on 1,000+ Google reviews</span>
@@ -160,7 +159,7 @@ document.addEventListener('click', (event) => {
   const dropdown = trigger?.closest('.nav-dropdown');
   const isMobileNavOpen = header?.classList.contains('is-open') && window.matchMedia('(max-width: 1120px)').matches;
 
-  if (trigger && dropdown?.querySelector('.nav-menu') && (trigger.tagName !== 'A' || isMobileNavOpen)) {
+  if (trigger && !trigger.hasAttribute('data-direct-nav') && dropdown?.querySelector('.nav-menu') && (trigger.tagName !== 'A' || isMobileNavOpen)) {
     event.preventDefault();
     const isOpen = dropdown.classList.contains('is-open');
     closeDropdowns();
@@ -210,7 +209,7 @@ locationDetails['palm-desert'] = {
 };
 
 const pageLocationDefaults = {
-  'anthem-palm-desert.html': 'palm-desert',
+  '/anthem-palm-desert.html': 'palm-desert',
 };
 
 const getCurrentLocationSlug = () => {

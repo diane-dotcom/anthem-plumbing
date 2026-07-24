@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Anthem">
+  <defs>
+    <linearGradient id="redSlash" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#ff2735" />
+      <stop offset="1" stop-color="#b70818" />
+    </linearGradient>
+    <linearGradient id="blueSlash" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#2f65c9" />
+      <stop offset="1" stop-color="#0b2c6b" />
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="52" fill="#07101f" />
+  <path d="M34 123 133 109" fill="none" stroke="url(#redSlash)" stroke-linecap="round" stroke-width="12" />
+  <path d="M48 139 147 122" fill="none" stroke="url(#blueSlash)" stroke-linecap="round" stroke-width="12" />
+  <path d="M139 40 208 190h-42l-29-66-41 82H55L139 40Z" fill="#fff" />
+  <path d="M138 84 170 159h-23l-12-31-22 45H91l47-89Z" fill="#0b1020" opacity=".48" />
+  <path d="M174 112h52l-24 29h-14l24 49h-42l-39-90 19-37 24 49Z" fill="#fff" />
+</svg>

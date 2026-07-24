@@ -4,7 +4,6 @@ const nextConfig = {
     return {
       beforeFiles: [
         { source: '/', destination: '/index.html' },
-        { source: '/services', destination: '/services.html' },
         { source: '/about', destination: '/about.html' },
         { source: '/locations', destination: '/locations.html' },
         { source: '/anthem-branded-location-lp', destination: '/Anthem Branded Location LP.html' },
@@ -32,9 +31,9 @@ const nextConfig = {
   },
   async redirects() {
     return [
-      { source: '/drain-cleaning', destination: '/services.html?service=drain-cleaning', permanent: false },
-      { source: '/water-heaters', destination: '/services.html?service=water-heaters', permanent: false },
-      { source: '/ac-repair', destination: '/services.html?service=ac-repair', permanent: false },
+      { source: '/drain-cleaning', destination: '/services/drain-cleaning', permanent: true },
+      { source: '/water-heaters', destination: '/services/water-heaters', permanent: true },
+      { source: '/ac-repair', destination: '/services/ac-repair', permanent: true },
     ];
   },
 };
